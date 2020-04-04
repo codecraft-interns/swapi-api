@@ -18,7 +18,7 @@ Assignment to assess html,css and js
 
 - run 'git fetch'
 
-- create new branch from master by 'git branch codecraft-swapi-<firstname>-<lastname>'
+- create new branch from master by 'git branch codecraft-swapi-firstname-lastname'
   
 - check the tutorials how to add, commit and push changes
 
