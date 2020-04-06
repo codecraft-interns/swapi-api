@@ -23,3 +23,11 @@ Assignment to assess html,css and js
 - check the tutorials how to add, commit and push changes
 
 - after this create a pull request on master to review
+
+
+## Pull request Standard
+
+- proper folder structure
+- BEM followed correctly, dont miss use id's where class was necessary
+- dont just write code for submission, just understand what are we trying to acheive 
+- Code should have reusability, maintainability, scalability 
