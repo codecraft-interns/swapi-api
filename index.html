@@ -2,11 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <title>swapi</title>
 </head>
 <body>
-    <div class="abc">hello abc</div>
-    
+    <div class="container">
+        <div class="heading">
+            Star Wars
+        </div>   
+        <div class="subcontainer">
+            <div class="categories">
+                <span class="catheading">Categories</span>
+                <span class="catheading catheading--btn"><input type="radio" name="categories" >people</span>                 
+                <span class="catheading catheading--btn"><input type="radio" name="categories" >planets</span>
+             
+                <span class="catheading catheading--btn"><input type="radio" name="categories">Spaceships</span>
+           
+                    <span class="catheading catheading--btn"><input type="radio"name="categories">Species</span>
+               
+            </div>
+            <div class="info">
+                <div class="info info__infolabl">
+                    <label>name:</label>
+                    <label>Height:</label>
+                    <label>Hair Color:</label>
+                    <label>Skin Color:</label>
+                    <label>Birth Year:</label>
+                    <label>Gender:</label>
+                    <button class="prevbtn">&lt;&lt; previous</button>
+                </div>
+                <div class="info__infolabl info__infolabl--infovalue">
+                    <label>Luke Skywalker</label>
+                    <label>172</label>
+                    <label>blond</label>
+                    <label>fair</label>
+                    <label>19BBY</label>
+                    <label>male</label>
+                    <button class="prevbtn prevbtn--nextbtn">next &gt;&gt;</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 </body>
 </html>
