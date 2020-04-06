@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>POC on Java sscript</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">  
+</head>
+
+<style type="text/css">
+	#main-header{
+		text-align: center;
+	}
+	.categories{
+		width: 250px;
+		height: 300px;
+		background-color: white;
+		margin: 50px;
+		float: left;
+		
+	}
+
+	#cat{
+		color: black;
+		padding-left: 20px;
+		font-style: normal;
+		font-size: 20px;
+	}
+	.main-content{
+		width: 400px;
+		height: 525px;
+		background-color: white;
+		margin-top: 50px;
+		margin-left: 400px;
+		border-style: solid;
+		border-color: grey;
+		padding-top: 10px;
+		padding-left: 50px;
+	}
+	#tejas{
+		display: none;
+	}
+	.pp{
+		float: left;
+	}
+	#right{
+		color:#2D2B2F;
+		padding-left: 30px;
+	}
+	#left{
+		
+		padding-left: 50px;
+	}
+	.previous {
+  background-color: green;
+  color: white;
+}
+
+.next {
+  background-color: blue;
+  color: white;
+
+}
+button{
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+}
+button:disabled{
+	background-color: darkgrey;
+	color: grey;
+}
+button:disabled:hover {
+ background-color: darkgrey;
+	color: grey;
+}
+button:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+</style>
+<body>
+	<header>
+<h1 id="main-header" >Star Wars</h1>
+	</header>
+<div class="categories">
+	<p id="cat" >Categories</p>
+	<P id="cat">
+	<input type="radio" name="choice" onclick="getobject(person)">Person
+	</P>
+
+	<P id="cat">
+	<input type="radio" name="choice" onclick="getobject(Planets)">Planets
+	</P>
+
+	<P id="cat">
+	<input type="radio" name="choice" onclick="getobject(SpaceShips)" >SpaceShips
+	</P>
+
+	<P id="cat">
+	<input type="radio" name="choice" onclick="getobject(Species)">Species
+	</P>
+</div>
+<div class="main-content">
+<div class="pp" id="left">
+	<h3 class="left-content">Name:</h3><br>
+	<h3 class="left-content">Height:</h3><br>
+	<h3 class="left-content">Hair Color:</h3><br>
+	<h3 class="left-content">Skin Color:</h3><br>
+	<h3 class="left-content">Birth Year:</h3><br>
+	<h3 class="left-content">Gender:</h3><br>
+	<button onclick="sub();" class="previous" id="back-button">&laquo Prevision</button>
+	<button onclick="add();"  class="next" id="forward-button">Next &raquo</button>
+</div>
+<div class="pp" id="right">
+<h3  class="right-content" id="first"></h3><br>
+<h3  class="right-content" id="second"></h3><br>
+<h3  class="right-content" id="third"></h3><br>
+<h3  class="right-content" id="fourth"></h3><br>
+<h3  class="right-content" id="fifth"></h3><br>
+<h3  class="right-content" id="sixth"></h3><br>
+<h3 id="tejas">1</h3>
+</div>
+
+</div>
+
+</body>
+<script type="text/javascript">
+	var person,Planets,SpaceShips,Species,object;
+	
+	person={
+		"name":["tejas","ravi","srilatha","rama","rohith","jayashree"],
+		"height":["123cm","132cm","182cm","133cm","125cm","171cm"],
+		"Hair":["black","black","black","green","black","brown"],
+		"Skin":["white","black","white","black","black","cream"],
+		"Birth":["17 mach 1998","17 june 1998","17 may 1998","17 april 1998","17 mach 1998","17 may 1998"],
+		"Gender":["male","male","male","female","male","male"]
+	}
+		Planets={
+		"name":["mercury","venus","earth","jupiter","ploto","neptune","mars","saturn"],
+		"height":["5012km","4521km","1824km","1335km","1257km","1718km","1257km","1718km"],
+		"Hair":["black","black","black","green","black","brown","black","brown"],
+		"Skin":["blue","orange","red","black","black","cream","black","cream"],
+		"Birth":["17 mach 1998","27 april 1998","17 may 1998","17 june 1998","17 august 1998","17 sep 1998","17 august 1998","17 sep 1998"],
+		"Gender":["male","male","male","female","male","male","male","male"]
+	}
+	SpaceShips={
+		"name":["Churchill","Daedalus","Excalibur"],
+		"height":["123cm","132cm","182cm"],
+		"Hair":["black","black","black"],
+		"Skin":["white","black","white"],
+		"Birth":["17 april 1998","17 mach 1998","17 june 1998"],
+		"Gender":["male","male","male"]
+	}
+	Species={
+		"name":["tiger","wolf"],
+		"height":["123cm","132cm"],
+		"Hair":["black","black"],
+		"Skin":["white","black"],
+		"Birth":["10 july 1998","10 mach 1998"],
+		"Gender":["male","female"]
+	}
+	function show(sum,p){
+		
+		document.getElementById("tejas").innerHTML=sum;
+		document.getElementById("first").innerHTML=p.name[sum];
+		document.getElementById("second").innerHTML=p.height[sum];
+		document.getElementById("third").innerHTML=p.Hair[sum];
+		document.getElementById("fourth").innerHTML=p.Skin[sum];
+		document.getElementById("fifth").innerHTML=p.Birth[sum];
+		document.getElementById("sixth").innerHTML=p.Gender[sum];
+		document.getElementById("tejas").innerHTML=sum;
+
+		
+	}
+	function getobject(p){
+		object= p;
+		document.getElementById("tejas").innerHTML=0;
+		document.getElementById("back-button").disabled=false;
+		document.getElementById("forward-button").disabled=false;
+		show(0,p);
+		
+
+	}
+	function add() {
+
+		var t=document.getElementById('tejas').textContent;
+		sum=parseInt(t);
+		
+		if(sum<object.name.length-1){
+			
+			document.getElementById("back-button").disabled=false;
+			sum++;
+			show(sum,object);
+		
+
+	}else{
+		document.getElementById("forward-button").disabled=true;
+	}
+	
+	}
+	function sub() {
+		document.getElementById("forward-button").disabled=false;
+		var t=document.getElementById('tejas').textContent;
+		sum=parseInt(t);
+		if(sum>0){
+		sum--;
+		show(sum,object);
+	}
+	else{
+		document.getElementById("back-button").disabled=true;
+	}
+}
+</script>
+</html>
