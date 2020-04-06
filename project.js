@@ -17,9 +17,9 @@
     
     async function updateNextPerson() {
       const {name} = await getPerson(++index);
-      const {height}=await getPerson(++index);
-      const {gender}=await getPerson(++index);
-      const {skin_color}=await getPerson(++index);
+      const {height}=await getPerson(index);
+      const {gender}=await getPerson(index);
+      const {skin_color}=await getPerson(index);
       peronName.innerText = name;
       personHeight.innerText=height;
       personGender.innerText=gender;
@@ -29,9 +29,9 @@
     
     async function updateNextPerson1() {
         const {name} = await getPerson(--index);
-        const {height} = await getPerson(--index);
-        const {gender} = await getPerson(--index);
-        const {skin_color} = await getPerson(--index);
+        const {height} = await getPerson(index);
+        const {gender} = await getPerson(index);
+        const {skin_color} = await getPerson(index);
         peronName.innerText = name;
         personHeight.innerText=height;
         personGender.innerText=gender;
