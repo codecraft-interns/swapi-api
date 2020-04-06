@@ -3,12 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>swapi</title>
 </head>
 <body>
     <div class="container">
-        Hello 
+        <div class="container__heading">Star Wars</div>
+        <div class="container__box">
+            <div class="container__box__text">
+            <div class="container__box__col1">
+                <div>Name&nbsp;:</div>
+                <div>Height&nbsp;:</div>
+                <div>Gender&nbsp;:</div>
+                <div>Color&nbsp;:</div>
+            </div>
+            <div class="container__box__col2">
+                <div id="name">&lt;Not Found&gt;</div>
+                <div id="height">&lt;Not Found&gt;</div>
+                <div id="gender">&lt;Not Found&gt;</div>
+                <div id="skin">&lt;Not Found&gt;</div>
+            </div>
+        </div>
+        
+            <!--
+            <div class="container__box__name" >Name:&nbsp;&nbsp;&nbsp;&nbsp;<p id="name">&lt;Not Found&gt;</p></div>
+            <div class="container__box__height">height:&nbsp;&nbsp;&nbsp;&nbsp;&lt;Not Found&gt;</div>
+            <div class="container__box__gender">gender:&nbsp;&nbsp;&nbsp;&nbsp;&lt;Not Found&gt;</div>
+            <div class="container__box__skin">hair color:&nbsp;&nbsp;&nbsp;&nbsp;&lt;Not Found&gt;</div>
+            --> 
+            <div class="container__box__btn">
+                <button class="container__box__btn__btn1" id="btn1">&lt;&lt;Previous</button>
+                <button class="container__box__btn__btn2" id="btn2"> Next>> </button>
+            </div>
+        </div>      
     </div>
-    <div class="container2">new class</div>
+    <script src="project.js"></script>
 </body>
 </html>
