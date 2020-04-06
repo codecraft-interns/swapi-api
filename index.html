@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>POC-Include-JavaScript</title>
+    <link rel="stylesheet" href="style.css">
 </head>
     
 <body>
@@ -21,16 +22,29 @@
         <!-- MAIN BODY -->
         <div class="main-body">
 
-            <div class="check-box">
-                <form action="#">
-                    <input type="radio" id="" value="people">
-                    <input type="radio" id="" value="planets">
-                    <input type="radio" id="" value="spaceships">
-                    <input type="radio" id="" value="species">
+            <div> 
+                <form class="main-body__check-box">
+                    <h3>Category</h3>
+                    <div class="main-body__check-box__content">
+                        <input type="radio" id="people" name="star-wars" value="people">
+                        <label for="people">People</label>
+                    </div>
+                    <div class="main-body__check-box__content">
+                        <input type="radio" id="planets" name="star-wars" value="planets">
+                        <label for="planets">Planets</label>
+                    </div>
+                    <div class="main-body__check-box__content">
+                        <input type="radio" id="spaceships" name="star-wars" value="spaceships">
+                        <label for="spaceships">Spaceships</label>
+                    </div>
+                    <div class="main-body__check-box__content">
+                        <input type="radio" id="species" name="star-wars" value="species">
+                        <label for="species">Species</label>
+                    </div>
                 </form>
             </div>
 
-            <div class="display-box">
+            <div class="main-body__display-box">
 
             </div>
         </div>
