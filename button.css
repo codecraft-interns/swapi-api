@@ -1,0 +1,13 @@
+.prevbtn{
+    height: 50px;
+    width:150px;
+    background-color: #0bc050;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    margin:50px 0px 0px 0px;
+}
+
+.prevbtn--nextbtn{
+    background-color:#2166e6;
+}
