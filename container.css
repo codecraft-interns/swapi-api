@@ -1,0 +1,40 @@
+.subcontainer{
+    display:flex;
+    padding: 0px 50px 40px 200px;
+    height: 100%;
+}
+.categories{
+    display: flex;
+    flex-direction: column;  
+    padding:0px 200px 0px 100px;
+    
+}
+
+.catheading{
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.catheading--btn{
+    font-size: 18px;
+}
+.info{
+    display: flex;
+    width:500px;
+    height: 600px;
+    padding: 25px 50px 50px 50px;
+    border: 3px solid #2166e6;
+    border-radius: 8px;
+}
+.info__infolabl{
+display:flex;
+flex-direction: column;
+font-weight: bold;
+justify-content: space-around;
+padding:0px 50px;
+border: none;
+}
+.info__infolabl--infovalue{
+    padding:0px 70px;
+    font-weight: unset;
+}
