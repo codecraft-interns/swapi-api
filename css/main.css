@@ -1,0 +1,27 @@
+.main-view {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 3px solid lightskyblue;
+    width: 600px;
+    height: 600px;
+    border-radius: 2%;
+    margin-left: 130px;
+   padding-top: 10px;
+}
+
+
+
+.main-view--box{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.main-view--box >div{
+    text-align: center;
+    padding-top: 90px;;
+    font-size: 15px;
+    width: 270px;
+    height: 20px;
+}
