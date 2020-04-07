@@ -1,11 +1,11 @@
 .subcontainer{
-    display:flex;
+    display:var(--container-display);
     padding: 0px 50px 40px 200px;
     height: 100%;
 }
 .categories{
-    display: flex;
-    flex-direction: column;  
+    display: var(--container-display);
+    flex-direction: var(--container-flex-direction);  
     padding:0px 200px 0px 100px;
     
 }
@@ -13,13 +13,13 @@
 .catheading{
     margin-bottom: 20px;
     font-size: 30px;
-    font-weight: bold;
+    font-weight: var(--container-font-weight);
 }
 .catheading--btn{
     font-size: 18px;
 }
 .info{
-    display: flex;
+    display: var(--container-display);
     width:500px;
     height: 600px;
     padding: 25px 50px 50px 50px;
@@ -27,9 +27,9 @@
     border-radius: 8px;
 }
 .info__infolabl{
-display:flex;
-flex-direction: column;
-font-weight: bold;
+display:var(--container-display);
+flex-direction: var(--container-flex-direction);
+font-weight: var(--container-font-weight);
 justify-content: space-around;
 padding:0px 50px;
 border: none;
