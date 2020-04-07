@@ -1,0 +1,6 @@
+:root {
+    --max-screen-width-desktop: 1220px;
+    --container-padding: 20px 20px;
+    --website-background-color: #ffffff;
+    --website-font-family: "Montserrat", sans-serif;
+}

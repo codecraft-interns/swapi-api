@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>Next Person Details</title>
+    <base href=" " />
+    <title>Star Wars</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- favicon link -->
-    <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
+    <link rel="icon" type="image/png" href="favicon.png">
 
     <!-- css links -->
     <link rel="stylesheet" href="css/style.css">
@@ -18,64 +19,63 @@
 
     <div class="container">
         <!-- header -->
-        <h1>Star Wars</h1>
+        <div class="header">
+            <h1>Star Wars</h1>
+        </div>
         <!-- Body -->
         <div class="content">
             <!-- Categories -->
             <div class="categories_selection">
-                <form name="/" method="" action="">
+                <form name="categorie-details" method="" action="">
                     <h3>Categories</h3>
-                    <input type="radio" name="categorie" value="People" checked>People<br/></input>
-                    <input type="radio" name="categorie" value="Planet">Planet<br/></input>
-                    <input type="radio" name="categorie" value="SpaceShips">SpaceShips<br/></input>
-                    <input type="radio" name="categorie" value="Species">Species</input>
+                    <span><input type="radio" id="people" name="categorie" value="People" checked ><b>People</b></span><br/>
+                    <span><input type="radio" id="planet" name="categorie" value="Planet"><b>Planet</b></span><br/>
+                    <span><input type="radio" id="space-ships" name="categorie" value="SpaceShips"><b>SpaceShips</b></span><br/>
+                    <span><input type="radio" id="species" name="categorie" value="Species"><b>Species</b></span>
                 </form>
             </div>
             <!-- People Details -->
-            <div id="next-people">
-                <div id="next-people__detail">
+            <div class="next-people">
+                <div class="next-people__detail">
                     <table>
                         <tr>
                             <td><b>Name:</b></td>
-                            <td id="next-people__name">&lt;Not Found&gt;</td>
+                            <td class="next-people__name" id="people-name">&lt;Not Found&gt;</td>
                         </tr>
                         <tr>
                             <td><b>Height:</b></td>
-                            <td id="next-people__height">&lt;Not Found&gt;</td>
+                            <td class="next-people__height" id="people-height">&lt;Not Found&gt;</td>
                         </tr>
                         <tr>
                             <td><b>Hair Color:</b></td>
-                            <td id="next-people__hair">&lt;Not Found&gt;</td>
+                            <td class="next-people__hair" id="people-hair">&lt;Not Found&gt;</td>
                         </tr>
                         <tr>
                             <td><b>Skin Color:</b></td>
-                            <td id="next-people__skin">&lt;Not Found&gt;</td>
+                            <td class="next-people__skin" id="people-skin">&lt;Not Found&gt;</td>
                         </tr>
                         <tr>
                             <td><b>Birth year:</b></td>
-                            <td id="next-people__birth">&lt;Not Found&gt;</td>
+                            <td class="next-people__birth" id="people-birth">&lt;Not Found&gt;</td>
                         </tr>
                         <tr>
                             <td><b>Gender:</b></td>
-                            <td id="next-people__gender">&lt;Not Found&gt;</td>
+                            <td class="next-people__gender" id="people-gender">&lt;Not Found&gt;</td>
                         </tr>
 
                     </table>
-                    <!-- <div id="next-people__name"><b>Name:</b>&lt;Not Found&gt;</div>
-                    <div id="next-people__height"><b>Height:</b>&lt;Not Found&gt;</div>
-                    <div id="next-people__hair-color"><b>Hair Color:</b>&lt;Not Found&gt;</div>
-                    <div id="next-people__skin-color"><b>Skin Color:</b>&lt;Not Found&gt;</div>
-                    <div id="next-people__birth-year"><b>Birth Year:</b>&lt;Not Found&gt;</div>
-                    <div id="next-people__gender"><b>Gender:</b>&lt;Not Found&gt;</div> -->
+
                 </div>
-                <div id="next-people__btn">
-                    <button id="prev">Previous</button>
-                    <button id="next">Next</button>
+
+                <div class="next-people__btn">
+                    <button class="prev" id="prev-btn">Previous</button>
+                    <button class="next" id="next-btn">Next</button>
                 </div>
             </div>
         </div>
 
     </div>
+    <!-- Script -->
     <script src="js/nextperson.js"></script>
 </body>
 

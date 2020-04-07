@@ -1,0 +1,10 @@
+body {
+    background-color: var(--website-background-color);
+    font-family: var(--website-font-family);
+}
+
+.container {
+    max-width: var(--max-screen-width-desktop);
+    padding: 30px auto;
+    padding: var(--container-padding);
+}
