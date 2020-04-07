@@ -1,0 +1,4 @@
+body {
+  background-color: var(--website-background-color);
+  font-family: var(--website-font-family);
+}

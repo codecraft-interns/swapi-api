@@ -1,21 +1,29 @@
+
 .container{
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 .container__heading
 {
     font-size: 36px;
-    font-family: sans-serif;
     padding: 50px 550px;
+}
+.container__flex{
+    margin-left: 80px;
+    display: flex;
+    flex-direction: row;
+}
+form{
+    line-height: 20px;
+    
+    font-size: 18px;
 }
 .container__box
 {
+    padding-left: 20px;
     border: 1px solid;
     height: 450px;
     width: 500px;
-    margin: auto;
+    margin-left: 300px;
     border-width: 4px;
     border-color:lightblue;
     border-radius: 10px;
@@ -32,24 +40,7 @@
 .container__box__col2{
     padding-left: 180px;
 
-}/*
-.container__box__name{
-    font-size: 18px;
-    padding: 30px 12px;
 }
-.container__box__height{
-    font-size: 18px;
-    padding: 30px 12px;
-}
-.container__box__gender{
-    font-size: 18px;
-    padding: 30px 12px;
-}
-.container__box__skin{
-    font-size: 18px;
-    padding: 30px 12px;
-}
-*/
 .container__box__btn
 {
     display: flex;
