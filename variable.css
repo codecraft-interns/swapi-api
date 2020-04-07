@@ -3,4 +3,8 @@
 --heading-text-align: center;
 --heading-font-size: 40px;
 --heading-font-weight: bold;
+
+--container-flex-direction:column;
+--container-display:flex;
+--container-font-weight:bold;
 }
