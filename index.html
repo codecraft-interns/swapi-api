@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel = "stylesheet" href = "style.css">
 </head>
+
 <body>
-    <h1>Hello world</h1>
+
+    <!---Container--->
+    <div class = "container">
+
+        <!---Head--->
+        <div class = "header">Star War</div>
+        <!---Head-end--->
+
+        <!---Main-Body--->
+        <div class = "main">
+            <div class = "main__checkbox">
+                <div class = "main__checkbox-title">categories</div>
+                <div class = "main__chekbox-form" id>
+                    <form>
+                        <span><input type="radio" id="people" name="animals" value="people" checked>
+                        <label for="people">people</label></span>
+                        <span><input type="radio" id="planets" name="animals" value="planets">
+                        <label for="planets">planets</label></span>
+                        <span><input type="radio" id="spaceships" name="animals" value="spaceships">
+                        <label for="spaceships">spaceships</label></span>
+                        <span><input type="radio" id="species" name="animals" value="species">
+                        <label for="species">species</label></span>
+                    </form> 
+                </div>
+            </div>
+            <div class = "main__name-list">
+                <div class = "main__name-list-labels">
+                    <p id = "personname"></p>
+                    <p id = "personheight"></p>
+                    <p id = "personhaircolor"></p>
+                    <p id = "personskincolor"></p>
+                    <p id = "personbirthyear"></p>
+                    <p id = "persongender"></p>
+                    <button id = "prevBtn">Previous</button> 
+                </div>
+                <div class = "main__name-list-details">
+                    <p id = "personName">&lt;Not found&gt;</p>
+                    <p id = "personHeight">&lt;Not found&gt;</p>
+                    <p id = "personHairColor">&lt;Not found&gt;</p>
+                    <p id = "personSkinColor">&lt;Not found&gt;</p>
+                    <p id = "personBirthYear">&lt;Not found&gt;</p>
+                    <p id = "personGender">&lt;Not found&gt;</p>
+                    <button id = "nextBtn">Next</button>
+                </div>
+            </div>  
+        </div>
+        <!--Main-end-->
+
+    </div>
+    <!---Container-end--->
 </body>
 </html>
