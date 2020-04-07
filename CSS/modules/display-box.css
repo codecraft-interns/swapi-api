@@ -1,0 +1,19 @@
+.main-body__display-box {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: blue;
+    border-width: 2px;
+    position: relative;
+}
+
+.main-body__display-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-body__display-each-column {
+    display: flex;
+}

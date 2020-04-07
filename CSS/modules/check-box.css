@@ -1,0 +1,9 @@
+.main-body__check-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-body__check-box__content {
+    display: flex;
+    margin: 15px auto;  
+}

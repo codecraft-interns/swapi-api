@@ -1,0 +1,10 @@
+.container-fluid {
+    width: 100%;
+    padding: var(--container-paddind);
+}
+
+.container {
+    max-width: var(--max-screen-width-desktop);
+    margin: 0 auto;
+    padding: var(--container-paddind);
+}

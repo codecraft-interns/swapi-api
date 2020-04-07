@@ -1,0 +1,5 @@
+.main-body {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 60px;
+}
