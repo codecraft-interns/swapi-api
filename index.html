@@ -2,20 +2,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Star Wars</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/button.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/side.css">
+
 </head>
 <body>
-    <header class="header">
-        <p>
-            hello world
-        </p>
-    </header>
-    <container class="main">
-    <div class="main">hi</div>
-    </container>
 
-    <div class="side">hello</div>
-    <div class="change">new change</div>
+
+<!--header section-->
+  <header class="header">
+      <div class="header--name"> Star Wars</div>
+  </header> 
+<div class="select-view-container">
+
+
+
+  <!--sideview section-->
+  <selection class="side-view"> 
+      <div class="side-view--cat"> 
+
+          Categories
+       
+          <div class="side-view--people">
+
+            <input type="radio" id="People" name="swcat" onclick="AssignPeople()"  value="people">
+            People
+        </div>  
+
+
+          <div class="side-view--planet">
+            <input type="radio" id="Planet" name="swcat"  onclick="AssignPlanet()">
+            Planets
+          </div>  
+
+
+           <div class="side-view--space">
+            <input type="radio" id="Space" name="swcat"  onclick="AssignSpaceShips()">
+           SpaceShips
+           </div> 
+
+
+           <div class="side-view--species">
+            <input type="radio" id="Species" name="swcat"  onclick="AssignSpecies()">
+            Species
+           </div>    
+      </div>
+  </selection>
+  <!--mainview section-->
+
+
+  <container class="main-view">
+
+  <div class="main-view--box">
+
+    <div class="firstAttribute" id="first"> NAME</div>
+      <div id="firstValue"></div>
     
+
+    <div class="secondAttribute" id="second">HEIGHT</div>
+      <div id="secondValue"></div>
+    
+
+    <div class="thirdAttribute" id="third">BIRTH YEAR</div>
+      <div id="thirdValue"></div>
+    
+    
+    <div class="fourthAttribute" id="fourth">GENDER</div>
+      <div id="fourthValue"></div>
+
+
+      <div class="bttn--previous">
+        <button class="previousbttn" id="previous">PREVIOUS</button>
+      </div>
+      <div class="bttn--next">
+        <button class="nextbttn" id="next">NEXT</button>
+      </div>
+    
+    
+
+
+
+
+</div>
+
+
+
+  </container>
+
+</div>
+<!--script sections-->
+<script src="/js/swapi.js"> </script>
 </body>
 </html>
