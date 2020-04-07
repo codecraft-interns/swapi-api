@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>POC on Java sscript</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">  
+</head>
+
+
+<body onload="getobject('person')">
+	<header>
+<h1 id="main-header" >Star Wars</h1>
+	</header>
+<div class="categories">
+	<p id="cat" >Categories</p>
+	<P id="cat">
+	<input type="radio" checked="checked" name="choice" onclick="getobject('person')">Person
+	</P>
+
+	<P id="cat">
+	<input type="radio" name="choice" onclick="getobject('planet')">Planets
+	</P>
+
+	<P id="cat">
+	<input type="radio" name="choice" onclick="getobject('spaces')" >SpaceShips
+	</P>
+
+	<P id="cat">
+	<input type="radio" name="choice" onclick="getobject('species')">Species
+	</P>
+</div>
+<div class="main-content">
+<div class="pp" id="left">
+	<h3 class="left-content" >Name:</h3><br>
+	<h3 class="left-content" id="1">Height:</h3><br>
+	<h3 class="left-content" id="2">Hair Color:</h3><br>
+	<h3 class="left-content" id="3">Skin Color:</h3><br>
+	<h3 class="left-content" id="4">Birth Year:</h3><br>
+	<h3 class="left-content" id="5">Gender:</h3><br>
+	<button onclick="sub();" class="previous" id="back-button">&laquo Prevision</button>
+	<button onclick="add();"  class="next" id="forward-button">Next &raquo</button>
+</div>
+<div class="pp" id="right">
+<h3  class="right-content" id="first"></h3><br>
+<h3  class="right-content" id="second"></h3><br>
+<h3  class="right-content" id="third"></h3><br>
+<h3  class="right-content" id="fourth"></h3><br>
+<h3  class="right-content" id="fifth"></h3><br>
+<h3  class="right-content" id="sixth"></h3><br>
+<h3 id="tejas">1</h3>
+</div>
+
+</div>
+
+</body>
+<script type="text/javascript" src="js/app.js"></script>
+</html>
