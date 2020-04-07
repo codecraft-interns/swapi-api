@@ -1,0 +1,17 @@
+.side-view{
+    display: flex;
+    width: 300px;
+    height: 45%;
+    justify-content: center;
+    margin-left: 76px;
+}
+.side-view--cat{
+    font-weight: bold;
+    font-size: 30px;
+    flex-direction: column;
+}
+.side-view--cat div{
+    padding-top: 35px;
+    font-size: 16px;
+    margin-left: 10px;
+}

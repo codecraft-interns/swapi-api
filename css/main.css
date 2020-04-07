@@ -1,0 +1,28 @@
+.container-box{
+    display: flex;
+    flex-direction: row;
+}
+.main-view{
+    display: flex;
+    box-sizing: border-box;
+    border: 3px solid cornflowerblue;
+    border-radius: 2%;
+    width: 570px;
+    height: 550px;
+    margin-left: 16px;
+    margin-bottom: 59px;
+}
+.main-view--box{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.main-view--box >div{
+    text-align: center;
+    padding-top: 51px;
+    font-size: 15px;
+    width: 270px;
+    height: 20px;
+}
+
