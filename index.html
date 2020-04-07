@@ -1,12 +1,91 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!--CSS Files-->
+    <link rel="stylesheet" href="/css/button.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/side.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Star Wars</title>
 </head>
+
+
 <body>
-<div class="container">
-    Hello
+    <!--Header-->
+<header class="header">
+    <div class="header--name">Star Wars</div>
+</header>
+<div class="container-box">
+
+<!--Side View -->
+<selection class="side-view">
+    <div class="side-view--cat">
+        Categories
+        
+        <div class="side-view--people">
+
+            <input type="radio" id="People" name="Starwars" value="people" onclick="AssignPeople()" >
+            People
+        </div>  
+
+
+        <div class="side-view--planet">
+            <input type="radio" id="Planet" name="Starwars" value="planet" onclick="AssignPlanet()">
+            Planet
+        </div>  
+
+
+        <div class="side-view--space">
+            <input type="radio" id="Space" name="Starwars" value="space"onclick="AssignSpaceShips()">
+            Space
+        </div> 
+
+
+        <div class="side-view--species">
+            <input type="radio" id="Species" name="Starwars" value="species" onclick="AssignSpecies()">
+            Species
+        </div>
+        
+    </div>
+</selection>
+
+<!--Main View-->
+<container class="main-view">
+    <div class="main-view--box" id="main-view--box">
+        <div class="firstAttribute" id="first"> NAME</div>
+        <div id="firstValue">b</div>
+      
+  
+      <div class="secondAttribute" id="second">HEIGHT</div>
+        <div id="secondValue">b</div>
+      
+  
+      <div class="thirdAttribute" id="third">BIRTH YEAR</div>
+        <div id="thirdValue"></div>
+      
+      
+      <div class="fourthAttribute" id="fourth">GENDER</div>
+        <div id="fourthValue"></div>
+  
+  
+        <div class="button--previous">
+          <button id="previous" class="previous">PREVIOUS</button>
+        </div>
+        <div class="button--next">
+          <button id="next" class="next">NEXT</button>
+        </div>
+    </div>
+</container>
 </div>
+
+<!--Script-->
+<script src="/js/app.js"></script>
 </body>
 </html>
