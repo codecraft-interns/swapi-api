@@ -1,0 +1,6 @@
+.heading{
+    padding:var(--heading-padding);
+    text-align:var(--heading-text-align);
+    font-size: var(--heading-font-size);
+    font-weight:var(--heading-font-weight);
+}
