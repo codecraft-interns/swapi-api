@@ -1,24 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <title>Swap api</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-    <div class="displayDetails">
-        displayDetails....
+
+    <div class="wrapper">
+        <h1>Star Wars API</h1>
+        <div class="dispaly-details">
+
+            <div class="categories_selection">
+                <form name="categ" method="" action="">
+                    <h2>Categories</h2>
+                    <input type="radio" name="People" value="People" checked>People<br/></input>
+                    <input type="radio" name="Planet" value="Planet">Planet<br/></input>
+                    <input type="radio" name="SpaceShips" value="SpaceShips">SpaceShips<br/></input>
+                    <input type="radio" name="Species" value="Species">Species</input>
+
+                </form>
+            </div>
+
+            <div id="people">
+                <div id="people__detail">
+                    <table>
+                        <tr>
+                            <td>
+                                <b>Name:</b>
+                            </td>
+                            <td id="name">&lt;Not Found&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Height:</b>
+                            </td>
+                            <td id="height">&lt;Not Found&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Hair Color:</b>
+                            </td>
+                            <td id="hair_color">&lt;Not Found&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Skin Color:</b>
+                            </td>
+                            <td id="skin_color">&lt;Not Found&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Birth year:</b>
+                            </td>
+                            <td id="birth_year">&lt;Not Found&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Gender:</b>
+                            </td>
+                            <td id="gender">&lt;Not Found&gt;</td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="next-people__btn">
+                    <button id="previousbtn">Previous</button>
+                    <button id="nextbtn">Next>></button>
+                </div>
+            </div>
+        </div>
+
     </div>
-        <div><button class="btn">previous</button>
-            <button class="btn">next</button></div>
-    
-    
-        
-    
+    <script src="app.js"></script>
 </body>
+
 </html>
-
-
