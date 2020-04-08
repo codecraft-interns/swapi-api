@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Star Wars API</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="heading">Star Wars</div>
+
+	<div class="container">
+
+		<aside>
+			<span>Categories</span><br><br>
+
+			<input type="radio" id="people" name="categories" value="people" checked>
+  			<label for="people">People</label><br><br>
+  			<input type="radio" id="planet" name="categories" value="planet">
+  			<label for="planet">Planet</label><br><br>
+  			<input type="radio" id="spaceships" name="categories" value="spaceships">
+			<label for="spaceships">SpaceShips</label><br><br>
+			<input type="radio" id="species" name="categories" value="species">
+  			<label for="species">Species</label>  
+		</aside>
+
+		<div class="main">
+			<div id="information"> Not Found </div>
+			<div class="buttons">
+				<button class="btn btn__prevbtn" id="prevbutton">Previous</button>
+				<button class="btn btn__nextbtn" id="nextbutton">Next</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+
+</body>
+</html>
