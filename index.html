@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel = "stylesheet" type = "text/css" href="../css/main.css">
+    <link rel = "stylesheet" type = "text/css" href="/css/main.css">
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" type="image/png" href="starwars.png">
+
     <title>Star Wars </title>
 </head>
     <div class="container">
@@ -14,12 +19,12 @@
 
             <form class  = "container__flex-container__radio-btn">
                 <p>Categories</p>
-              <span><input type="radio"  name="people" ><label>People</label></span>
-              <span><input type="radio"  name="spaceships" value="female"><label>Spaceships</label></span>
+              <span><input type="radio" value = "people"   id="people" name = "selection"  checked><label>People</label></span>
+              <span><input type="radio" value = "spaceships" id="radio-btn" name = "selection" ><label>Spaceships</label></span>
               
-              <span><input type="radio"  name="planets" value="other"><label>Planets</label></span>
+              <span><input type="radio" value = "planets" id="radio-btn" name = "selection"><label>Planets</label></span>
                 
-                <span><input type="radio"  name="species" value="other"><label>Species</label></span>
+                <span><input type="radio"value = "species"  id="radio-btn" name = "selection" ><label>Species</label></span>
 
             </form> 
 
@@ -31,20 +36,20 @@
                     <span>Skin Color:</span>
                     <span>Birth Year:</span>
                     <span>Gender:</span>
-                    <span><button class = "previous">Previous</button></span>
+                    <span><button class = "previous" id = "previous" disabled>Previous</button></span>
                 </span>
-                <div class = "container__flex-container__details__inner2">
-                    <p id = "name"></p>
-                    <p id = "height"></p>
-                    <p id = "hair"></p>
-                    <p id = "skin"></p>
-                    <p id = "birth"></p>
-                    <p id = "gender"></p>
-                    <span><button class = "next">Next</button></span>
+                <div class = "container__flex-container__details__inner2" id = "information">
+                    <p id = "one"></p>
+                    <p id = "two"></p>
+                    <p id = "three"></p>
+                    <p id = "four"></p>
+                    <p id = "five"></p>
+                    <p id = "six"></p>
+                    <span><button class = "next" id ="next">Next</button></span>
                 </div>
             </div>
         </div>
      </div>
-    <script src = "../script/app.js"></script>
+    <script src = "./script/app.js"></script>
 </body>
 </html>
