@@ -1,6 +1,10 @@
+@import url("core/common.css");
+@import url("core/variables.css");
+@import url("core/reset.css");
+
+/* modules */
 @import url("modules/button.css");
 @import url("modules/heading.css");
 @import url("modules/container.css");
-@import url("core/common.css");
-@import url("core/variable.css");
-@import url("core/reset.css");
+
+

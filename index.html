@@ -5,47 +5,50 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
-    <title>Star Wars</title>
+    <title>swapi</title>
 </head>
 <body>
     <div class="container">
         <div class="heading">
             Star Wars
         </div>   
-        <div class="sub-container">
+        <div class="subcontainer">
             <div class="categories">
                 <span class="category-heading">Categories</span>
-                <span class="category-heading category-heading--btn"><input type="radio" name="categories" >people</span>                 
-                <span class="category-heading category-heading--btn"><input type="radio" name="categories" >planets</span>
+                <span class="category-heading category-heading--btn"><input type="radio" name="categories" id="people" value="people" checked> people</span>                 
+                <span class="category-heading category-heading--btn"><input type="radio" name="categories" id="planets" value="planets">planets</span>
              
-                <span class="category-heading category-heading--btn"><input type="radio" name="categories">Spaceships</span>
+                <span class="category-heading category-heading--btn"><input type="radio" name="categories" id="spaceships" value="starships">Spaceships</span>
            
-                    <span class="category-heading category-heading--btn"><input type="radio"name="categories">Species</span>
+                <span class="category-heading category-heading--btn"><input type="radio" name="categories" id="Species" value="species">Species</span>
                
             </div>
             <div class="information">
                 <div class="information information__information-label">
-                    <label id="lbl-name">name:</label>
-                    <label id="lbl-Height">Height:</label>
-                    <label id="lbl-Hair-Color">Hair-Color:</label>
-                    <label id="lbl-Skin-Color">Skin-Color:</label>
-                    <label id="lbl-Birth-Year">Birth-Year:</label>
-                    <label id="lbl-Gender">Gender:</label>
-                    <button class="prev-btn">&lt;&lt; previous</button>
+                    <label id="first-label">name:</label>
+                    <label id="second-label">Height:</label>
+                    <label id="third-label">Hair-Color</label>
+                    <label id="fourth-label">Skin-Color</label>
+                    <label id="fifth-label">Birth-Year</label>
+                    <label id="sixth-label">Gender</label>
+
+                        <button class="prev-btn" id="prev-btn">&lt;&lt; previous</button>
+                    
+
                 </div>
-                <div class="information__information-label information__information-label--informationvalue">
-                    <label id="name"></label>
-                    <label id="Height"></label>
-                    <label id="Hair-Color"></label>
-                    <label id="Skin-Color"></label>
-                    <label id="Birth-Year"></label>
-                    <label id="Gender"></label>
-                    <button class="prev-btn prev-btn--next-btn">next &gt;&gt;</button>
+                <div class="information__information-label information__information-label--information-value">
+                    <label id="first-attribute">abc</label>
+                    <label id="second-attribute">abc</label>
+                    <label id="third-attribute">abc</label>
+                    <label id="fourth-attribute">abc</label>
+                    <label id="fifth-attribute">abc</label>
+                    <label id="sixth-attribute">abc</label>
+                    <button class="prev-btn prev-btn--next-btn" id="next-btn">next &gt;&gt;</button>
                 </div>
             </div>
             
         </div>
     </div>
-    <script src="main.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
