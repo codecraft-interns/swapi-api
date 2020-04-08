@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: auto;
+    font-family: sans-serif;  
+}
+.container{
+    height: 100vh;
+    margin: 45px 90px 50px 90px;
+}
+.header{
+    text-align: center;
+    font-size: 35px;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    height: 93.8vh;
+    padding: 65px 60px 70px 55px;
+}
+.main__checkbox{
+    width: 111px;
+    height: 200px;
+    margin-left: 25px;
+}
+.main__checkbox-form{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.main__checkbox-title{
+    padding: 6px 0 16px 15px;
+    font-size :20px;
+}
+form{
+   display: flex;
+   flex-direction: column;
+   word-spacing: 5px;
+}
+input[type="radio"]{
+    margin-bottom: 22px;
+}
+.main__name-list{
+    display: flex;
+    flex-direction: row;
+    padding :0 0 0 25px;
+    width: 40%;
+    height: 100%;
+    margin-left: 180px;
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+
+.main__name-list-details{
+    padding :0 0 0 60px;
+}
+
+p{
+    padding : 20px 0 20px 30px;
+    font-size: 20px;
+}
+
+button{
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+#nextBtn{
+    background: lightblue;
+    margin: 8px 0 0 40px;
+}
+
+#prevBtn{
+    background-color: lightgreen;
+    margin: 8px 0 0 35px;
+    border-radius: 5px;
+}
+    
+
