@@ -29,29 +29,34 @@
     <div class="side-view--cat">
         Categories
         
-        <div class="side-view--people">
-
-            <input type="radio" id="People" name="Starwars" value="people" onclick="AssignPeople()" >
+<div class="side-view--people">
+    <button  id="peoplebttn">
+            <input type="radio" id="People" name="Starwars" value="people" >
             People
-        </div>  
-
-
-        <div class="side-view--planet">
-            <input type="radio" id="Planet" name="Starwars" value="planet" onclick="AssignPlanet()">
+    </button>
+</div>  
+<div class="side-view--planet">
+        <button id="planetbttn">
+            <input type="radio" id="Planet" name="Starwars" value="planet" >
             Planet
-        </div>  
+        </button>
+</div>  
 
 
-        <div class="side-view--space">
-            <input type="radio" id="Space" name="Starwars" value="space"onclick="AssignSpaceShips()">
-            Space
-        </div> 
+<div class="side-view--space">
+    <button id="spacebttn">
+        <input type="radio" id="Space" name="Starwars" value="spaceships" >
+        SpaceShips
+    </button>
+</div>  
 
 
-        <div class="side-view--species">
-            <input type="radio" id="Species" name="Starwars" value="species" onclick="AssignSpecies()">
-            Species
-        </div>
+<div class="side-view--species">
+    <button id="speciesbttn">
+        <input type="radio" id="Species" name="Starwars" value="species" >
+        Species
+    </button>
+</div>  
         
     </div>
 </selection>
@@ -60,26 +65,26 @@
 <container class="main-view">
     <div class="main-view--box" id="main-view--box">
         <div class="firstAttribute" id="first"> NAME</div>
-        <div id="firstValue">b</div>
+        <div id="firstValue">-</div>
       
   
       <div class="secondAttribute" id="second">HEIGHT</div>
-        <div id="secondValue">b</div>
+        <div id="secondValue">-</div>
       
   
       <div class="thirdAttribute" id="third">BIRTH YEAR</div>
-        <div id="thirdValue"></div>
+        <div id="thirdValue">-</div>
       
       
       <div class="fourthAttribute" id="fourth">GENDER</div>
-        <div id="fourthValue"></div>
+        <div id="fourthValue">-</div>
   
   
         <div class="button--previous">
-          <button id="previous" class="previous">PREVIOUS</button>
+          <button id="previous" class="previous">&lt&ltPREVIOUS</button>
         </div>
         <div class="button--next">
-          <button id="next" class="next">NEXT</button>
+          <button id="next" class="next">NEXT&gt&gt</button>
         </div>
     </div>
 </container>
