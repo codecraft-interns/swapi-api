@@ -71,15 +71,15 @@
         let labels=["Name:","Height:","Hair-Color:","Skin-Color:","Birth-Year:","Gender:"];
        
         
-        updateData(++index,"person",labels);
+        updateData(++index,"people",labels);
         prevBtn.addEventListener('click', function(e){
             if(index>1){
-            updateData(--index,"person",labels);
+            updateData(--index,"people",labels);
             }
         },false)
         
         nextBtn.addEventListener('click', function(e){
-            updateData(++index,"person",labels);
+            updateData(++index,"people",labels);
         },false)
     },false)
    
