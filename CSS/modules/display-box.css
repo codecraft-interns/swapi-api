@@ -19,7 +19,7 @@
 .main-body__display-each-column {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .main-body__btn__container {
