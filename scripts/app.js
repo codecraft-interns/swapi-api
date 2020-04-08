@@ -1,13 +1,12 @@
 ((window,document,undefined) => {
 
-    let index = 0;
-    var category = 0;
+    var index = 1;
 
     //category-to-select
-    let people = document.getElementById("people");
-    let planet = document.getElementById("planets");
-    let spaceship = document.getElementById("spaceships");
-    let species = document.getElementById("species");
+    const people = document.getElementById("people");
+    const planet = document.getElementById("planets");
+    const spaceship = document.getElementById("spaceships");
+    const species = document.getElementById("species");
 
     //display-box__LHS-content
     let argone = document.getElementById("lhs-one");
@@ -26,54 +25,36 @@
     let valuesix = document.getElementById("rhs-six");
 
     //display-box__button
-    let nextbtn = document.getElementById("next");
-    let prevbtn = document.getElementById("prev")
+    const nextbtn = document.getElementById("next");
+    const prevbtn = document.getElementById("prev")
 
-    // function getURL(cat) {
-    //     let cat = cat;
-    //     var swapiAPI = (index = 1) => `https://swapi.co/api/${cat}/${index}/?format=json`;
-    //     return swapiAPI;
-    // }
+    // const elementRef = [
+    //     [...{ lableref: argone }, ...{ valueRef: valueone }],
+    //     [...{ lableref: argtwo }, ...{ valueRef: valuetwo }],
+    //     [...{ lableref: argthree }, ...{ valueRef: valuethree }],
+    //     [...{ lableref: argfour }, ...{ valueRef: valuefour }],
+    //     [...{ lableref: argfive }, ...{ valueRef: valuefive }],
+    //     [...{ lableref: argsix }, ...{ valueRef: valuesix }]
+    // ];
 
-    // function getdata(URL,index=1) {
-    //     return (fetch(URL(index)).then(data => data.jason());
-    // }
+    // const arrppl = ["name" ,"height", "hair_color", "skin_color", "birth_year", "gender"]
 
-    // async function displayRHScontent() {
-    //     const {name, height, hair_color} = await getdata(undefined, index);
-    //     valueone.innerHTML = name;
-    //     argone.innerHTML = "name";
-    // }
+    const swapipplAPI = (index=1) => `https://swapi.co/api/people/${index}/?format=json`;
 
-    // //eventliteners of radio button 
-    // people.addEventListener('click', (e) => {
-    //     category = "people";
-    //     var URL = getURL(category);
-    //     let data = getdata(URL);
-    //     displayRHScontent(data);
-    // },false)
-
-    // planet.addEventListener('click', (e) => {
-    //     displayPlanet();
-    // },false)
-    
-    // spaceship.addEventListener('click', (e) => {
-    //     displaySpaceship();
-    // },false)
-
-    // species.addEventListener('click', (e) => {
-    //     displaySpecies();
-    // },false)
-
-    const swapi = (index=1) => `https://swapi.co/api/people/${index}/?format=json`;
-
-
-    function getitem(index=1) {
-        return fetch(swapi(index)).then(data => data.json());
+    function getData(index = 1) {
+        return fetch(swapipplAPI(index)).then(data => data.json());
     }
 
-    async function display() {
-        const {name, height} = await getitem(++index);
+    function getNextData() {
+        return ++index;
+    }
+
+    function getPrevData() {
+        return --index;
+    }
+
+    async function displayData() {
+        const {name, height} = await getData(index);
         argone.innerText = "people";
         valueone.innerText = name;
         argtwo.innerText = "height";
@@ -81,17 +62,15 @@
     }
 
     people.addEventListener('click', (e) => {
-        display();
-    })
+        displayData();
+    },false)
 
-    //eventliteners of display box button
     nextbtn.addEventListener('click', (e) => {
-        nextContent();
+        displayData(getNextData());
     },false)
 
     prevbtn.addEventListener('click', (e) => {
-        prevContent();
+        displayData(getPrevData());
     },false)
 
-
-})(window,document)
+})(window,document);

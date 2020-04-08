@@ -12,8 +12,17 @@
 .main-body__display-content {
     display: flex;
     flex-direction: column;
+    width: 400px;
+    margin: 20px auto;
 }
 
 .main-body__display-each-column {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.main-body__btn__container {
+    position: absolute;
+    bottom: 30px;
 }

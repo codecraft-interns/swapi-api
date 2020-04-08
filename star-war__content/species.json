@@ -1,4 +1,4 @@
-{
+[{
 			"name": "Hutt",
 			"classification": "gastropod",
 			"designation": "sentient",
@@ -216,4 +216,4 @@
 			"created": "2014-12-19T17:53:11.214000Z",
 			"edited": "2014-12-20T21:36:42.167000Z",
 			"url": "https://swapi.co/api/species/14/"
-		}
+		}]
