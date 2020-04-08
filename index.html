@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>swapi</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+	<title>Star Wars</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    hello world
+	<h2 class="heading">Star Wars</h2>
+
+	<div class="container">
+
+		<section class="categories">
+			<h3>Categories</h3>
+
+			<div><input type="radio" id="people" name="categories" value="people" checked>People<br><br></div>
+  			
+            <div><input type="radio" id="planet" name="categories" value="planet">Planet<br><br></div>
+  			
+            <div><input type="radio" id="spaceships" name="categories" value="spaceships">SpaceShips<br><br></div>
+			
+            <div><input type="radio" id="species" name="categories" value="species">Species<br><br></div>
+  			  
+		</section>
+
+		<div class="display-details">
+			<div class="display-details__content" id="information"> Not Found </div>
+			<div class="buttons">
+				<button class="btn btn__prevbtn" id="previous-btn">Previous</button>
+				<button class="btn btn__nextbtn" id="next-btn">Next</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="scripts/app.js"></script>
+
 </body>
 </html>
