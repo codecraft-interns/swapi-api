@@ -1,14 +1,4 @@
-// window.onload=function(){
-//     var mb=this.document.getElementById('fetchuserbtn');
-// mb.addEventListener("click",fetchuserdata)
-// }
 
-
-// function fetchuserdata(){
-//     fetch('https://jsonplaceholder.typicode.com/users/')
-//     .then(response=>response.json())
-//     .then(json=>console.log(json))
-// }
 (()=>{
     let index = 0;
     const personName = document.getElementById('name');
