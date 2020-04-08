@@ -4,6 +4,7 @@
     padding:0;
     box-sizing:border-box;
     font-family: monospace;
+    max-width: 1326px;
 }
 .body{
     background: white;

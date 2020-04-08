@@ -9,12 +9,11 @@
     color:#ffffff;
     font-family:Arial;
     font-size:15px;
-    padding:9px 23px;
     text-decoration:none;
     text-shadow:0px 1px 0px #263666;
     width: 123px;
     height: 38px;;
-
+    
 }
 
 .next{
@@ -28,11 +27,20 @@
     color:#ffffff;
     font-family:Arial;
     font-size:15px;
-    padding:9px 23px;
     text-decoration:none;
     text-shadow:0px 1px 0px #263666;
     width: 123px;
     height: 38px;;
+    
+}
+.side-view--cat button{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 #first,#second,#third,#fourth{
     font-weight: bold;
