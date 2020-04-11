@@ -1,15 +1,13 @@
 .prev-btn{
     height: 50px;
     width:150px;
+    background-color: #0bc050;
     border: none;
     border-radius: 5px;
-    background-color:#0bc050;
     color: #ffffff;
     margin:50px 0px 0px 0px;
-    
 }
 
 .prev-btn--next-btn{
     background-color:#2166e6;
 }
-

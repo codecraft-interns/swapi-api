@@ -1,4 +1,4 @@
-.subcontainer{
+.sub-container{
     display:var(--container-display);
     padding: 0px 50px 40px 200px;
     height: 100%;
@@ -27,12 +27,12 @@
     border-radius: 8px;
 }
 .information__information-label{
-   display:var(--container-display);
-   flex-direction: var(--container-flex-direction);
-   font-weight: var(--container-font-weight);
-   justify-content: space-around;
-   padding:0px 50px;
-   border: none;
+display:var(--container-display);
+flex-direction: var(--container-flex-direction);
+font-weight: var(--container-font-weight);
+justify-content: space-around;
+padding:0px 50px;
+border: none;
 }
 .information__information-label--information-value{
     padding:0px 70px;
