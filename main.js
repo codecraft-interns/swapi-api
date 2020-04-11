@@ -10,8 +10,8 @@
    let fifth_attribute = document.getElementById("fifth-attribute");
    let sixth_attribute = document.getElementById("sixth-attribute");
    /*previous and next button*/
-   let nextBtn = document.getElementById("nextbtn");
-   let prevBtn = document.getElementById("prevbtn");
+   let next_btn = document.getElementById("next-btn");
+   let prev_btn = document.getElementById("prev-btn");
    /*radio buttons*/
    let peopleRadio=document.getElementById("people");
    let planetsRadio=document.getElementById("planets");
@@ -87,38 +87,38 @@
    async function updateNextRecord() {
        const data = await getRecord(currentCategory, ++index);
        renderUI(data, currentCategory);
-       updatePrevBtnStatus();
+       updateprevbtnStatus();
      }
  
    async function updatePreviousRecord() {
        const data = await getRecord(currentCategory, --index);
        renderUI(data, currentCategory);
-       updatePrevBtnStatus();
+       updateprevbtnStatus();
      }
 
    function initializeCategory(catgeoryName) {
        currentCategory = catgeoryName;
        index = 0;
        updateNextRecord();
-       updatePrevBtnStatus();
+       updateprevbtnStatus();
      }
  
-   function updatePrevBtnStatus() {
+   function updateprevbtnStatus() {
        if(index <= 1){
-       prevBtn.disabled=true;
+       prev_btn.disabled=true;
        }
        else{
-           prevBtn.disabled=false;
+           prev_btn.disabled=false;
        }
    }
 
 
-   nextBtn.addEventListener('click', function (e) {
+   next_btn.addEventListener('click', function (e) {
        updateNextRecord();
      }, false)
  
  
-     prevBtn.addEventListener('click', function (e) {
+     prev_btn.addEventListener('click', function (e) {
        updatePreviousRecord();
      }, false)
 
@@ -144,7 +144,7 @@
    },false)
 
    function init(){
-     debugger
+     
        initializeCategory(currentCategory);
    }
 
