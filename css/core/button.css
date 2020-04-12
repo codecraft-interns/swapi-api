@@ -1,0 +1,14 @@
+.container__box__btn
+{
+    display: flex;
+    flex-direction:row;
+    height: 35px;
+    margin-left: 50px;
+}
+.container__box__btn__btn1{
+margin-right: 200px;
+background-color:lightblue;
+}
+.container__box__btn__btn2{
+    background-color:lightgreen;
+}

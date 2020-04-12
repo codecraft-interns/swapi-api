@@ -1,20 +1,7 @@
-
-.container{
-    box-sizing: border-box;
-}
-.container__heading
-{
-    font-size: 36px;
-    padding: 50px 550px;
-}
 .container__flex{
     margin-left: 80px;
     display: flex;
     flex-direction: row;
-}
-form{
-    line-height: 30px;
-    font-size: 18px;
 }
 .container__box
 {
@@ -36,22 +23,7 @@ form{
     margin-left: 30px;
     line-height: 80px;
 }
-.container__box__col2{
+.container__box__text-col2{
     padding-left: 180px;
 
-}
-.container__box__btn
-{
-    display: flex;
-    flex-direction:row;
-    width: 75px;
-    height: 30px;
-    margin-left: 40px;
-}
-.container__box__btn__btn1{
-margin-right: 200px;
-background-color:lightblue;
-}
-.container__box__btn__btn2{
-    background-color:lightgreen;
 }

@@ -2,3 +2,8 @@ body {
   background-color: var(--website-background-color);
   font-family: var(--website-font-family);
 }
+
+form{
+  line-height: 30px;
+  font-size: 18px;
+}
