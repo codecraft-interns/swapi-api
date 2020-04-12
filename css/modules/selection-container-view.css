@@ -1,0 +1,49 @@
+.selection-container-view {
+    display: flex;
+    flex-direction: row;
+}
+
+.mainview {
+    display: flex;
+    box-sizing: border-box;
+    border: 3px solid cornflowerblue;
+    border-radius: 2%;
+    width: 570px;
+    height: 550px;
+    margin-left: 16px;
+    margin-bottom: 59px;
+}
+
+.mainview__box {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 564px;
+}
+
+.mainview__box>div {
+    text-align: center;
+    padding-top: 51px;
+    font-size: 15px;
+    width: 270px;
+    height: 20px;
+}
+
+.sideview {
+    display: flex;
+    height: 50%;
+    width: 300px;
+    justify-content: center;
+    margin-left: 200px;
+}
+
+.sideview__cat {
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.sideview__cat>div {
+    font-size: 15px;
+    padding-top: 40px;
+    margin-left: 10px;
+}
