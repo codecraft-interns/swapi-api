@@ -1,172 +1,168 @@
-((window,document,undefined)=>{
-  let index=0;
-    const firstAttribute=document.getElementById('firstValue');
-    const secondAttribute=document.getElementById('secondValue');
-    const thirdAttribute=document.getElementById('thirdValue');
-    const fourthAttribute=document.getElementById('fourthValue');
-    
-    const nextBttn = document.getElementById('next');
-    const previousBttn=document.getElementById('previous');
+((window, document, undefined) => {
+  window.onload = function () {
+    let index = 0;
+    let currentCategory = "people";
+    const firstLabel = document.getElementById("first-label");
+    const secondLabel = document.getElementById("second-label");
+    const thirdLabel = document.getElementById("third-label");
+    const fourthLabel = document.getElementById("fourth-label");
 
-    
+    const firstAttribute = document.getElementById("first-attribute");
+    const secondAttribute = document.getElementById("second-attribute");
+    const thirdAttribute = document.getElementById("third-attribute");
+    const fourthAttribute = document.getElementById("fourth-attribute");
 
-     function categories(categoryName,index)
-    {
+    const nextBtn = document.getElementById("next-btn");
+    const prevBtn = document.getElementById("prev-btn");
 
-    const swapiAPI = (index = 1) => `https://swapi.co/api/${categoryName}/${index}/?format=json`;
-    
-    function getPeople(index = 1) {
-      if(index>=1){
-      return fetch(swapiAPI(index)).then(data => data.json());
-      }
-      else{
-        let index=1;
-      }
-    }
-    
-    /* next button code */
-    
-    async function updateNextPerson() {
-      if(categoryName=='people')
-      {
-      const {name,height,birth_year,gender} = await getPeople(++index);
-      
-        firstAttribute.innerText =name;
-        secondAttribute.innerText=height;
-        thirdAttribute.innerText=birth_year;
-        fourthAttribute.innerText=gender;
-            
-      }
-    
+    const peopleCategory = document.getElementById("people-category");
+    const planetCategory = document.getElementById("planet-category");
+    const spaceCategory = document.getElementById("space-category");
+    const speciesCategory = document.getElementById("species-category");
 
-      else if(categoryName=='planet'){
-        const {name,diameter,climate,gravity} = await getPeople(++index);
-        firstAttribute.innerText =name;
-        secondAttribute.innerText=diameter;
-        thirdAttribute.innerText=climate;
-        fourthAttribute.innerText=gravity;
-            
-      }
-      else if(categoryName=='spaceships'){
-        const {name,model,crew,passenger} = await getPeople(++index);
-        firstAttribute.innerText =name;
-        secondAttribute.innerText=model;
-        thirdAttribute.innerText=crew;
-        fourthAttribute.innerText=passenger;
-            
-      }
-      else if(categoryName=='species')
-      {
-        const {name,classification,height,language} = await getPeople(++index);
-        firstAttribute.innerText =name;
-        secondAttribute.innerText=classification;
-        thirdAttribute.innerText=height;
-        fourthAttribute.innerText=language;
-      }
-
+    const swapiAPI = (category, index = 1) =>
+      `http://localhost:3000/${category}/${index}`;
+    function getRecord(category, index = 1) {
+      return fetch(swapiAPI(category, index)).then((data) => data.json());
     }
 
-    async function updatePreviousPerson(names) {
-      
-      if(categoryName=='people')
+    const keyValueMap = {
+      people: [
+        { key: "name", label: "Name" },
+        { key: "height", label: "Height" },
+        { key: "gender", label: "Gender" },
+        { key: "skin_color", label: "Skin color" },
+      ],
+      planets: [
+        { key: "name", label: "Name" },
+        { key: "diameter", label: "Diameter" },
+        { key: "climate", label: "Climate" },
+        { key: "gravity", label: "Gravity" },
+      ],
+      space: [
+        { key: "name", label: "Name" },
+        { key: "model", label: "Model" },
+        { key: "crew", label: "Crew" },
+        { key: "passenger", label: "Passenger" },
+      ],
+      species: [
+        { key: "name", label: "Name" },
+        { key: "average_height", label: "Height" },
+        { key: "classification", label: "Classification" },
+        { key: "designation", label: "Designation" },
+      ],
+    };
+
+    const attributeRefs = [
       {
-      const {name,height,birth_year,gender} = await getPeople(--index);
-      
-        firstAttribute.innerText =name;
-        secondAttribute.innerText=height;
-        thirdAttribute.innerText=birth_year;
-        fourthAttribute.innerText=gender;
-            
-      }
-    
-
-      else if(categoryName=='planet'){
-        const {name,diameter,climate,gravity} = await getPeople(--index);
-        firstAttribute.innerText =name;
-        secondAttribute.innerText=diameter;
-        thirdAttribute.innerText=climate;
-        fourthAttribute.innerText=gravity;
-            
-      }
-      else if(categoryName=='spaceships'){
-        const {name,model,crew,passenger} = await getPeople(--index);
-        firstAttribute.innerText =name;
-        secondAttribute.innerText=model;
-        thirdAttribute.innerText=crew;
-        fourthAttribute.innerText=passenger;
-            
-      }
-      else if(categoryName=='species')
+        labelRef: firstLabel,
+        valueRef: firstAttribute,
+      },
       {
-        const {name,classification,height,language} = await getPeople(--index);
-        firstAttribute.innerText =name;
-        secondAttribute.innerText=classification;
-        thirdAttribute.innerText=height;
-        fourthAttribute.innerText=language;
+        labelRef: secondLabel,
+        valueRef: secondAttribute,
+      },
+      {
+        labelRef: thirdLabel,
+        valueRef: thirdAttribute,
+      },
+      {
+        labelRef: fourthLabel,
+        valueRef: fourthAttribute,
+      },
+    ];
+
+    function renderUI(data, currentCategory) {
+      const keyValueMapByCategory = keyValueMap[currentCategory];
+
+      keyValueMapByCategory.forEach((entry, index) => {
+        const currentAttribute = attributeRefs[index];
+        const { key, label } = entry;
+        currentAttribute.valueRef.innerHTML = label;
+        currentAttribute.labelRef.innerHTML = data[key];
+      });
+    }
+
+    async function updateNextRecord() {
+      const data = await getRecord(currentCategory, ++index);
+      if (data["name"] != undefined) {
+        renderUI(data, currentCategory);
+      } else {
+        nextBtn.disabled = true;
+        --index;
       }
-
+    }
+    async function updatePreviousRecord() {
+      if (index <= 1) {
+        let index = 1;
+      } else {
+        nextBtn.disabled = false;
+        const data = await getRecord(currentCategory, --index);
+        renderUI(data, currentCategory);
       }
+    }
 
-      nextBttn.addEventListener('click',function(e){
-        
-        updateNextPerson();
-    },false)
+    function initializeCategory(catgeoryName) {
+      currentCategory = catgeoryName;
+      index = 0;
+      updateNextRecord();
+    }
 
-      
-      previousBttn.addEventListener('click', function(e) {
-        updatePreviousPerson();
-    }, false)
-    
-    updateNextPerson();
-  }
-  peoplebttn.addEventListener('click', function AssignPeople(){
-    document.getElementById('first').innerHTML="NAME";
-    document.getElementById('second').innerHTML="HEIGHT";
-    document.getElementById('third').innerHTML="BIRTH YEAR";
-    document.getElementById('fourth').innerHTML="GENDER";
-    let  type= document.getElementById("People").value;
-    let index=0;
-     categories(type,index);
-  } , false)
-    
-   planetbttn.addEventListener('click', function AssignPlanet(){
-    document.getElementById('first').innerHTML="NAME";
-    document.getElementById('second').innerHTML="DIAMETER";
-    document.getElementById('third').innerHTML="CLIMATE";
-    document.getElementById('fourth').innerHTML="GRAVITY";
-    let  type= document.getElementById("Planet").value;
-    let index=0;
-    categories(type,index);
-  }
-  , false)
-  
-    spacebttn.addEventListener('click',function AssignSpaceShips(){
-    document.getElementById('first').innerHTML="NAME";
-    document.getElementById('second').innerHTML="MODEL";
-    document.getElementById('third').innerHTML="CREW";
-    document.getElementById('fourth').innerHTML="PASSENGER";
-    let  type= document.getElementById("Space").value;
-    let index=0;
-    categories(type,index);
-  }
-  , false)
-  
-  speciesbttn.addEventListener('click',function AssignSpecies(){
-    document.getElementById('first').innerHTML="NAME";
-    document.getElementById('second').innerHTML="CLASSIFICATION";
-    document.getElementById('third').innerHTML="HEIGHT";
-    document.getElementById('fourth').innerHTML="LANGUAGE";
-    let  type= document.getElementById("Species").value;
-    let index=0;
-    categories(type,index);
-  }
-  , false)
+    /* attach event listers*/
+    //buttons
+    nextBtn.addEventListener(
+      "click",
+      function (e) {
+        updateNextRecord();
+      },
+      false
+    );
 
-})(window,document,undefined);
+    prevBtn.addEventListener(
+      "click",
+      function (e) {
+        updatePreviousRecord();
+      },
+      false
+    );
 
+    //categories
+    peopleCategory.addEventListener(
+      "click",
+      function (e) {
+        initializeCategory(e.target.value);
+      },
+      false
+    );
 
+    planetCategory.addEventListener(
+      "click",
+      function (e) {
+        initializeCategory(e.target.value);
+      },
+      false
+    );
 
+    spaceCategory.addEventListener(
+      "click",
+      function (e) {
+        initializeCategory(e.target.value);
+      },
+      false
+    );
 
+    speciesCategory.addEventListener(
+      "click",
+      function (e) {
+        initializeCategory(e.target.value);
+      },
+      false
+    );
 
+    function init() {
+      initializeCategory(currentCategory);
+    }
 
-
+    init();
+  };
+})(window, document, undefined);
