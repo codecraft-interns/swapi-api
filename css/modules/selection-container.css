@@ -1,0 +1,54 @@
+.selection-container-view{
+    display: flex;
+    flex-direction: row;
+}
+ 
+.sideview{
+    display: flex;
+    height: 50%;
+    width:300px;
+    justify-content: center;
+
+    margin-left: 200px;
+}
+
+.sideview__cat{
+  
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 45px;
+
+}
+.sideview__cat > div {
+    font-size: 15px;
+    padding-top: 40px;
+    margin-left: 10px;
+   
+
+}
+
+.mainview {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 3px solid lightskyblue;
+    width: 600px;
+    height: 600px;
+    border-radius: 2%;
+    margin-left: 130px;
+   padding-top: 10px;
+}
+
+.mainview__box{
+    display: flex;
+    flex-wrap: wrap;
+   min-width: 594px;
+}
+
+.mainview__box > div{
+    text-align: center;
+    padding-top: 90px;;
+    font-size: 15px;
+    width: 270px;
+    height: 20px;
+}
