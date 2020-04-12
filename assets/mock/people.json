@@ -1,0 +1,224 @@
+{
+    "people": [{
+            "id": 1,
+            "name": "Luke Skywalker",
+            "height": "172",
+            "hair_color": "blond",
+            "skin_color": "fair",
+            "birth_year": "19BBY",
+            "gender": "male"
+        },
+        {
+            "id": 2,
+            "name": "C-3PO",
+            "height": "167",
+            "hair_color": "n/a",
+            "skin_color": "gold",
+            "birth_year": "112BBY",
+            "gender": "n/a"
+        },
+        {
+            "id": 3,
+            "name": "R2-D2",
+            "height": "96",
+            "hair_color": "n/a",
+            "skin_color": "white, blue",
+            "birth_year": "33BBY",
+            "gender": "n/a"
+        },
+        {
+            "id": 4,
+            "name": "Darth Vader",
+            "height": "202",
+            "hair_color": "none",
+            "skin_color": "white",
+            "birth_year": "41.9BBY",
+            "gender": "male"
+        },
+        {
+            "id": 5,
+            "name": "Leia Organa",
+            "height": "150",
+            "hair_color": "brown",
+            "skin_color": "light",
+            "birth_year": "19BBY",
+            "gender": "female"
+        },
+        {
+            "id": 6,
+            "name": "Owen Lars",
+            "height": "178",
+            "hair_color": "brown, grey",
+            "skin_color": "light",
+            "birth_year": "52BBY",
+            "gender": "male"
+        }
+    ],
+
+    "planets": [{
+            "id": 1,
+            "name": "Alderaan",
+            "rotation_period": "24",
+            "orbital_period": "364",
+            "diameter": "12500",
+            "climate": "temperate",
+            "gravity": "1 standard"
+        },
+        {
+            "id": 2,
+            "name": "Yavin IV",
+            "rotation_period": "24",
+            "orbital_period": "4818",
+            "diameter": "10200",
+            "climate": "temperate, tropical",
+            "gravity": "1 standard"
+        },
+        {
+            "id": 3,
+            "name": "Hoth",
+            "rotation_period": "23",
+            "orbital_period": "549",
+            "diameter": "7200",
+            "climate": "frozen",
+            "gravity": "1.1 standard"
+        },
+        {
+            "id": 4,
+            "name": "Dagobah",
+            "rotation_period": "23",
+            "orbital_period": "341",
+            "diameter": "8900",
+            "climate": "murky",
+            "gravity": "N/A"
+        },
+        {
+            "id": 5,
+            "name": "Endor",
+            "rotation_period": "18",
+            "orbital_period": "402",
+            "diameter": "4900",
+            "climate": "temperate",
+            "gravity": "0.85 standard"
+        },
+        {
+            "id": 6,
+            "name": "Naboo",
+            "rotation_period": "26",
+            "orbital_period": "312",
+            "diameter": "12120",
+            "climate": "temperate",
+            "gravity": "1 standard"
+        }
+    ],
+    "spaceships": [{
+            "id": 1,
+            "name": "A-wing",
+            "model": "RZ-1 A-wing Interceptor",
+            "MGLT": "120",
+            "cargoCapacity": "40",
+            "consumables": "1 week",
+            "costInCredits": "175000"
+        },
+        {
+            "id": 2,
+            "name": "B-wing",
+            "model": "A/SF-01 B-wing starfighter",
+            "MGLT": "91",
+            "cargoCapacity": "45",
+            "consumables": "1 week",
+            "costInCredits": "220000"
+        },
+        {
+            "id": 3,
+            "name": "CR90 corvette",
+            "model": "CR90 corvette",
+            "MGLT": "60",
+            "cargoCapacity": "3000000",
+            "consumables": "1 year",
+            "costInCredits": "3500000"
+        },
+        {
+            "id": 4,
+            "name": "Death Star",
+            "model": "DS-1 Orbital Battle Station",
+            "MGLT": "10",
+            "cargoCapacity": "1000000000000",
+            "consumables": "3 year",
+            "costInCredits": "1000000000000"
+        },
+        {
+            "id": 5,
+            "name": "Imperial shuttle",
+            "model": "Lambda-class T-4a shuttle",
+            "MGLT": "50",
+            "cargoCapacity": "80000",
+            "consumables": "2 months",
+            "costInCredits": "240000"
+        },
+        {
+            "id": 6,
+            "name": "Executor",
+            "model": "Executor-class star dreadnought",
+            "MGLT": "40",
+            "cargoCapacity": "250000000",
+            "consumables": "6 year",
+            "costInCredits": "1143350000"
+        }
+    ],
+
+    "species": [{
+            "id": 1,
+            "name": "Hutt",
+            "classification": "gastropod",
+            "designation": "sentient",
+            "average_height": "300",
+            "skin_colors": "green, brown, tan",
+            "hair_colors": "n/a"
+        },
+        {
+            "id": 2,
+            "name": "Yoda's species",
+            "classification": "mammal",
+            "designation": "sentient",
+            "average_height": "66",
+            "skin_colors": "green, yellow",
+            "hair_colors": "brown, white"
+        },
+        {
+            "id": 3,
+            "name": "Trandoshan",
+            "classification": "reptile",
+            "designation": "sentient",
+            "average_height": "200",
+            "skin_colors": "brown, green",
+            "hair_colors": "none"
+        },
+        {
+            "id": 4,
+            "name": "Mon Calamari",
+            "classification": "amphibian",
+            "designation": "sentient",
+            "average_height": "160",
+            "skin_colors": "red, blue, brown, magenta",
+            "hair_colors": "none"
+        },
+        {
+            "id": 5,
+            "name": "Ewok",
+            "classification": "mammal",
+            "designation": "sentient",
+            "average_height": "100",
+            "skin_colors": "brown",
+            "hair_colors": "white, brown, black"
+        },
+        {
+            "id": 6,
+            "name": "Sullustan",
+            "classification": "mammal",
+            "designation": "sentient",
+            "average_height": "180",
+            "skin_colors": "pale",
+            "hair_colors": "none"
+        }
+    ]
+}

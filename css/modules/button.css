@@ -1,0 +1,28 @@
+button {
+    display: inline-block;
+    width: 100px;
+    margin: 30px;
+    border-radius: 3px;
+    border: none;
+    text-align: center;
+}
+
+.content__next-people__btn {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 50px auto;
+    justify-content: space-between;
+}
+
+.prev {
+    color: white;
+    background-color: #34b934;
+    padding: 10px 10px;
+}
+
+.next {
+    color: white;
+    background-color: #00e1ff;
+    padding: 10px 10px;
+}

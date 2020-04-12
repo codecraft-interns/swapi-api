@@ -1,0 +1,27 @@
+.content__next-people {
+    display: flex;
+    justify-content: center;
+    border: solid 2px rgb(13, 184, 241);
+    border-radius: 2%;
+    margin: 10px;
+    padding: 10px;
+    height: 500px;
+    width: 500px;
+    flex-direction: column;
+}
+
+.content__next-people__detail {
+    display: flex;
+    margin: 10px auto;
+    justify-content: space-between;
+}
+
+table {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+td {
+    padding: 15px 30px;
+}

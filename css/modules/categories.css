@@ -1,0 +1,9 @@
+.content__categories_selection {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 130px;
+}
+
+h3 {
+    padding: 15px 0;
+}

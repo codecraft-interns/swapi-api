@@ -8,3 +8,8 @@ body {
     padding: 30px auto;
     padding: var(--container-padding);
 }
+
+.content {
+    display: flex;
+    margin: 20px;
+}
