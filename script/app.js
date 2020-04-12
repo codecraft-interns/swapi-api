@@ -109,9 +109,6 @@
       --index;
       }
       else{
-        if(next_btn.disabled){
-          next_btn.disabled=false;
-        }
         renderUI(data,currentCategory);
       }
   }

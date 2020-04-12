@@ -1,5 +1,5 @@
 .heading{
-    padding:var(--heading-padding);
+    padding:80px 0px;
     text-align:var(--heading-text-align);
     font-size: var(--heading-font-size);
     font-weight:var(--heading-font-weight);

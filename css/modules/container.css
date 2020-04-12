@@ -1,11 +1,11 @@
 .subcontainer{
-    display:var(--container-display);
+    display:flex;
     padding: 0px 50px 40px 200px;
     height: 100%;
 }
 .categories{
-    display: var(--container-display);
-    flex-direction: var(--container-flex-direction);  
+    display:flex;
+    flex-direction:column;  
     padding:0px 200px 0px 100px;
     
 }
@@ -16,10 +16,10 @@
     font-weight: var(--container-font-weight);
 }
 .category-heading--btn{
-    font-size: 18px;
+    font-size: var(--radionbtn-font-size);
 }
 .information{
-    display: var(--container-display);
+    display:flex;
     width:500px;
     height: 600px;
     padding: 25px 50px 50px 50px;
@@ -27,8 +27,8 @@
     border-radius: 8px;
 }
 .information__information-label{
-   display:var(--container-display);
-   flex-direction: var(--container-flex-direction);
+   display:flex;
+   flex-direction: column;
    font-weight: var(--container-font-weight);
    justify-content: space-around;
    padding:0px 50px;

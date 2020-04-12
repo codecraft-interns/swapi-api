@@ -1,10 +1,11 @@
 :root{
---heading-padding: 80px 0px;
 --heading-text-align: center;
 --heading-font-size: 40px;
 --heading-font-weight: bold;
 
---container-flex-direction:column;
---container-display:flex;
+--common-background-color:#ffffff;
+--common-font-family:Arial, Helvetica, sans-serif;
+
 --container-font-weight:bold;
+--radionbtn-font-size:18px;
 }
