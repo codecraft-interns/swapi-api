@@ -1,96 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!--CSS Files-->
-    <link rel="stylesheet" href="/css/button.css">
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/side.css">
-
     <!--Favicon-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Star Wars</title>
-</head>
+  </head>
 
 
-<body>
+  <body>
     <!--Header-->
-<header class="header">
-    <div class="header--name">Star Wars</div>
-</header>
-<div class="container-box">
+    <header class="header">
+      <div class="header__name">Star Wars</div>
+    </header>
+    <div class="selection-container-view">
 
-<!--Side View -->
-<selection class="side-view">
-    <div class="side-view--cat">
-        Categories
-        
-<div class="side-view--people">
-    <button  id="peoplebttn">
-            <input type="radio" id="People" name="Starwars" value="people" >
+      <!--Side View -->
+      <selection class="sideview">
+        <div class="sideview__cat">
+          Categories
+
+          <div class="sideview__people">
+
+            <input type="radio" id="people-category" name="Starwars"
+              value="people">
             People
-    </button>
-</div>  
-<div class="side-view--planet">
-        <button id="planetbttn">
-            <input type="radio" id="Planet" name="Starwars" value="planet" >
+
+          </div>
+          <div class="sideview__planet">
+
+            <input type="radio" id="planet-category" name="Starwars"
+              value="planets">
             Planet
-        </button>
-</div>  
+
+          </div>
 
 
-<div class="side-view--space">
-    <button id="spacebttn">
-        <input type="radio" id="Space" name="Starwars" value="spaceships" >
-        SpaceShips
-    </button>
-</div>  
+          <div class="sideview__space">
+
+            <input type="radio" id="space-category" name="Starwars"
+              value="starships">
+            SpaceShips
+
+          </div>
 
 
-<div class="side-view--species">
-    <button id="speciesbttn">
-        <input type="radio" id="Species" name="Starwars" value="species" >
-        Species
-    </button>
-</div>  
-        
-    </div>
-</selection>
+          <div class="sideview__species">
 
-<!--Main View-->
-<container class="main-view">
-    <div class="main-view--box" id="main-view--box">
-        <div class="firstAttribute" id="first"> NAME</div>
-        <div id="firstValue">-</div>
-      
-  
-      <div class="secondAttribute" id="second">HEIGHT</div>
-        <div id="secondValue">-</div>
-      
-  
-      <div class="thirdAttribute" id="third">BIRTH YEAR</div>
-        <div id="thirdValue">-</div>
-      
-      
-      <div class="fourthAttribute" id="fourth">GENDER</div>
-        <div id="fourthValue">-</div>
-  
-  
-        <div class="button--previous">
-          <button id="previous" class="previous">&lt&ltPREVIOUS</button>
+            <input type="radio" id="species-category" name="Starwars"
+              value="species">
+            Species
+
+          </div>
+
         </div>
-        <div class="button--next">
-          <button id="next" class="next">NEXT&gt&gt</button>
-        </div>
-    </div>
-</container>
-</div>
+      </selection>
 
-<!--Script-->
-<script src="/js/app.js"></script>
-</body>
+      <!--Main View-->
+      <container class="mainview">
+        <div class="mainview__box">
+          <div class="mainview__box--firstattribute" id="first-attribute">
+          </div>
+          <div class="mainview__box--first-label" id="first-label"> </div>
+
+
+          <div class="mainview__box--secondAttribute" id="second-attribute">
+          </div>
+          <div class="mainview__box--second-label" id="second-label"> </div>
+          <div class="mainview__box--thirdAttribute" id="third-attribute">
+          </div>
+          <div class="mainview__box--third-label" id="third-label"> </div>
+
+
+          <div class="mainview__box--fourthAttribute" id="fourth-attribute">
+          </div>
+          <div class="mainview__box--fourth-label" id="fourth-label"> </div>
+          <div class="mainview__prev-btn">
+            <button id="prev-btn" class="prev-btn">&lt&ltPREVIOUS</button>
+          </div>
+          <div class="mainview__next-btn">
+            <button id="next-btn" class="next-btn">NEXT&gt&gt</button>
+          </div>
+        </div>
+      </container>
+    </div>
+
+    <!--Script-->
+    <script src="/js/app.js"></script>
+  </body>
 </html>
