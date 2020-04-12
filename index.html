@@ -12,46 +12,36 @@
         <div class="container__heading">Star Wars</div>
         <div class="container__flex">   
         <form>
-                <p><b>Categories</b></p><br/>
-                <button id="peoplebttn">
-                    <input type="radio" id="people" name="choice" value="people"> People</input>
-                </button>
-                <br/>
-               <button id="planetbttn">
-                    <input type="radio" id="planets" name="choice" value="planets"> Planets</input><br/>
-                </button>
-                <br/>
-               <button id="spacebttn">
-                    <input type="radio" id="space" name="choice" value="spaceships"> Spaceships</input><br/>
-                </button>
-                <br/>
-               <button id="speciesbttn">
-                    <input type="radio" id="species" name="choice" value="species"> Species</input>
-                </button>
+                <p><b>Categories</b></p>
+                    <input type="radio" id="people-Category" name="choice" value="people"> People</input><br/>
+                    <input type="radio" id="planets-Category" name="choice" value="planets"> Planets</input><br/>
+                    <input type="radio" id="species-Category" name="choice" value="species"> Species</input><br/>
+                    <input type="radio" id="space-Category" name="choice" value="starships"> Spaceships</input>
+       
         </form>
 
         <div class="container__box">
             <div class="container__box__text">
-            <div class="container__box__col1">
-                <div id="first">Name&nbsp;:</div>
-                <div id="second">Height&nbsp;:</div>
-                <div id="third">Gender&nbsp;:</div>
-                <div id="fourth">Color&nbsp;:</div>
+            <div class="container__box__text-col1">
+                <div id="first-label">Name&nbsp;:</div>
+                <div id="second-label">Height&nbsp;:</div>
+                <div id="third-label">Gender&nbsp;:</div>
+                <div id="fourth-label">Color&nbsp;:</div>
             </div>
-            <div class="container__box__col2">
-                <div id="firstAttribute">&lt;Not Found&gt;</div>
-                <div id="secondAttribute">&lt;Not Found&gt;</div>
-                <div id="thirdAttribute">&lt;Not Found&gt;</div>
-                <div id="fourthAttribute">&lt;Not Found&gt;</div>
+            <div class="container__box__text-col2">
+                <div id="first-Attribute">&lt;Not Found&gt;</div>
+                <div id="second-Attribute">&lt;Not Found&gt;</div>
+                <div id="third-Attribute">&lt;Not Found&gt;</div>
+                <div id="fourth-Attribute">&lt;Not Found&gt;</div>
             </div>
         </div>
             <div class="container__box__btn">
-                <button class="container__box__btn__btn1" id="btn1">&lt;&lt;Previous</button>
-                <button class="container__box__btn__btn2" id="btn2"> Next>> </button>
+                <button class="container__box__btn__btn1" id="prev-btn">&lt;&lt;Previous</button>
+                <button class="container__box__btn__btn2" id="next-btn"> Next>> </button>
             </div>
         </div>  
     </div>     
     </div>
-    <script src="js/project.js"></script>
+    <script src="script/app.js"></script>
 </body>
 </html>
