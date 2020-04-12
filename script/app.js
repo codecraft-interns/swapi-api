@@ -109,7 +109,14 @@
 
     async function updateNextRecord() {
       const data = await getRecord(currentCategory, ++index);
-      renderUI(data, currentCategory);
+      if(data['name'] == undefined)
+      {
+        nextBtn.disabled;
+        --index;
+      }
+      else{
+        renderUI(data, currentCategory);
+      }
      // updatePrevBtnStatus();
     }
 
