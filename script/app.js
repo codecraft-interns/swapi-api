@@ -86,7 +86,7 @@
    }
    async function updateNextRecord() {
        const data = await getRecord(currentCategory, ++index);
-       renderUI(data, currentCategory);
+       updatenextbtnStatus(data);
        updateprevbtnStatus();
      }
  
@@ -103,6 +103,18 @@
        updateprevbtnStatus();
      }
  
+     function updatenextbtnStatus(data) {
+      if(data["name"] == undefined){
+      next_btn.disabled;
+      --index;
+      }
+      else{
+        if(next_btn.disabled){
+          next_btn.disabled=false;
+        }
+        renderUI(data,currentCategory);
+      }
+  }
    function updateprevbtnStatus() {
        if(index <= 1){
        prev_btn.disabled=true;
