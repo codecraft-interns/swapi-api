@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--website-background-color);
+    font-family: var(--website-font-family);
+    font-weight: bold;
+  }
+  
+  img {
+    width: 100%;
+  }
