@@ -15,14 +15,6 @@ aside{
     font-weight: bold;
 }
 
-span{
-    font-size: 20px;
-}
-
-label{
-    font-size: 15px;
-}
-
 .main{
     width: 500px;
     height: 500px;
@@ -31,12 +23,17 @@ label{
 }
 
 #information{
+    display: flex;
+    justify-content: space-around;
     height:350px ;
-    padding: 50px 0 0 70px;
+    padding-top: 50px;
     font-size: 20px;
-    font-weight: bold;
     line-height: 50px;
     word-spacing: 2px;
+}
+
+.information__label{
+    font-weight: bold;
 }
 
 .buttons{
@@ -53,10 +50,10 @@ label{
   cursor: pointer;
 }
 
-.btn__prevbtn{
+.btn--prevbtn{
     background-color: #319804;
 }
 
-.btn__nextbtn{
+.btn--nextbtn{
     background-color: #2196EF;
 }

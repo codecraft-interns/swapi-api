@@ -1,0 +1,23 @@
+.heading{
+    text-align: center;
+    font-size: 40px;
+    font-family: sans-serif;
+    padding: 50px 0;
+}
+
+.container{
+    margin-right:250px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+aside{
+    font-weight: bold;
+}
+
+.main{
+    width: 500px;
+    height: 500px;
+    border: 2px solid #00BCD4;
+    border-radius: 1%;
+}

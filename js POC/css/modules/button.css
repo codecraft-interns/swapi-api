@@ -1,0 +1,21 @@
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin: 4px 2px;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.btn--prevbtn{
+    background-color: #319804;
+}
+
+.btn--nextbtn{
+    background-color: #2196EF;
+}

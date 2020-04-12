@@ -8,7 +8,6 @@
 	<link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-
 	<div class="heading">Star Wars</div>
 
 	<div class="container">
@@ -16,7 +15,7 @@
 		<aside>
 			<span>Categories</span><br><br>
 
-			<input type="radio" id="people" name="categories" value="people">People<br><br>  			
+			<input type="radio" id="people" name="categories" value="people" checked>People<br><br>  			
   			<input type="radio" id="planet" name="categories" value="planet">Planet<br><br>	
   			<input type="radio" id="spaceships" name="categories" value="spaceships">SpaceShips<br><br>		
 			<input type="radio" id="species" name="categories" value="species">Species
@@ -24,10 +23,29 @@
 		</aside>
 
 		<div class="main">
-			<div id="information"> Not Found </div>
+			<div id="information"> 
+			<div class="information__label">
+				<div id="label1"></div>
+				<div id="label2"></div>
+				<div id="label3"></div>
+				<div id="label4"></div>
+				<div id="label5"></div>
+				<div id="label6"></div>
+			</div>
+
+			<div class="information__value">
+				<div id="value1"></div>
+				<div id="value2"></div>
+				<div id="value3"></div>
+				<div id="value4"></div>
+				<div id="value5"></div>
+				<div id="value6"></div>
+			</div>
+			
+			</div>
 			<div class="buttons">
-				<button class="btn btn__prevbtn" id="prevbutton">Previous</button>
-				<button class="btn btn__nextbtn" id="nextbutton">Next</button>
+				<button class="btn btn--prevbtn" id="prevbutton">Previous</button>
+				<button class="btn btn--nextbtn" id="nextbutton">Next</button>
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,13 @@
+#information{
+    display: flex;
+    justify-content: space-around;
+    height:350px ;
+    padding-top: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    word-spacing: 2px;
+}
+
+.information__label{
+    font-weight: bold;
+}
