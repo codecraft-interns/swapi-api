@@ -3,12 +3,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Wars</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/button.css">
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/header.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/side.css">
+ 
 
 </head>
 <body>
@@ -16,82 +13,84 @@
 
 <!--header section-->
   <header class="header">
-      <div class="header--name"> Star Wars</div>
+      <div class="header__name"> Star Wars</div>
   </header> 
-<div class="select-view-container">
 
 
+  
+<div class="selection-container-view">
+    <!--sideview  section-->
 
-  <!--sideview section-->
-  <selection class="side-view"> 
-      <div class="side-view--cat"> 
+  <selection class="sideview"> 
+      <div class="sideview__cat"> 
 
           Categories
        
-          <div class="side-view--people">
-
-            <input type="radio" id="People" name="swcat" onclick="AssignPeople()"  value="people">
-            People
+          <div class="sideview__cat--people">
+            
+                    <input type="radio"  class="people-bttn" id="people-category"   name="Starwars"  value="people" checked >
+                    People
+      
         </div>  
 
+        <div class="sideview__cat--planet">
+               
+                    <input type="radio" class="planet-bttn"  id="planet-category"   name="Starwars"  value="planets" >
+                    Planet    
+        </div>  
+        
+        
+        <div class="sideview__cat--space">
+                <input type="radio"  class="space-bttn"  id="space-category"       name="Starwars"   value="starships" >
+                SpaceShips
+           
+        </div>  
+        
+        
+        <div class="sideview__cat--species">
+        
+                <input type="radio"  class="species-bttn"  id="species-category"    name="Starwars"  value="species" >
+                Species
+            
+        </div>
+        
 
-          <div class="side-view--planet">
-            <input type="radio" id="Planet" name="swcat"  onclick="AssignPlanet()">
-            Planets
-          </div>  
 
 
-           <div class="side-view--space">
-            <input type="radio" id="Space" name="swcat"  onclick="AssignSpaceShips()">
-           SpaceShips
-           </div> 
-
-
-           <div class="side-view--species">
-            <input type="radio" id="Species" name="swcat"  onclick="AssignSpecies()">
-            Species
-           </div>    
       </div>
   </selection>
   <!--mainview section-->
 
 
-  <container class="main-view">
+  <container class="mainview">
 
-  <div class="main-view--box">
+           <div class="mainview__box">
 
-    <div class="firstAttribute" id="first"> NAME</div>
-      <div id="firstValue"></div>
+     <div  id="first-attribute">-</div>
+     <div id="first-value"> - </div>
     
 
-    <div class="secondAttribute" id="second">HEIGHT</div>
-      <div id="secondValue"></div>
+    <div  id="second-attribute">-</div>
+    <div  id="second-value"> - </div>
     
 
-    <div class="thirdAttribute" id="third">BIRTH YEAR</div>
-      <div id="thirdValue"></div>
+    <div  id="third-attribute">-</div>
+    <div  id="third-value">-</div>
     
     
-    <div class="fourthAttribute" id="fourth">GENDER</div>
-      <div id="fourthValue"></div>
+    <div   id="fourth-attribute">-</div>
+    <div  id="fourth-value">-</div>
 
-
-      <div class="bttn--previous">
-        <button class="previousbttn" id="previous">PREVIOUS</button>
+    <div class="mainview__bttn-previous">
+        <button  class="previous-bttn"  id="prev-btn">&lt&ltPREVIOUS</button>
       </div>
-      <div class="bttn--next">
-        <button class="nextbttn" id="next">NEXT</button>
+      
+
+    <div class="mainview__bttn-next">
+        <button   class="next-bttn"   id="next-btn">NEXT&gt&gt</button>
       </div>
-    
-    
 
-
-
-
-</div>
-
-
-
+    </div>
   </container>
 
 </div>
