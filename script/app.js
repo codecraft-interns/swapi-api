@@ -21,7 +21,6 @@
       const speciesCategory = document.getElementById('species-Category');
       const spaceshipCategory=document.getElementById('spaceship-Category');
   
-      //const swapiAPI = (category, index = 1) => `https://swapi.co/api/${category}/${index}/?format=json`;
       const swapiAPI = (category,index=1) => `http://localhost:3000/${category}/${index}`;
 
   
