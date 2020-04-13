@@ -1,0 +1,7 @@
+:root{
+    --common-background-color:#ffffff;
+    --common-font-family:Arial, Helvetica, sans-serif;
+    
+    --container-padding:0px 30px;
+    --max-screen-width-desktop:1220px;
+}
