@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/favicon.png" type="image/png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="assets/favicon.png" type="image/png">
 	<title>Star Wars</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
 	<h2 class="heading">Star Wars</h2>
 
@@ -15,26 +17,45 @@
 		<section class="categories">
 			<h3>Categories</h3>
 
-			<div><input type="radio" id="people" name="categories" value="people" checked>People<br><br></div>
-  			
-            <div><input type="radio" id="planet" name="categories" value="planet">Planet<br><br></div>
-  			
-            <div><input type="radio" id="spaceships" name="categories" value="spaceships">SpaceShips<br><br></div>
-			
-            <div><input type="radio" id="species" name="categories" value="species">Species<br><br></div>
-  			  
+			<div><input type="radio" id="people-category" class="categories__radio-btn" name="categories" value="people" checked>People</div>
+
+			<div><input type="radio" id="planet-category" class="categories__radio-btn" name="categories" value="planets">Planet</div>
+
+			<div><input type="radio" id="starships-category" class="categories__radio-btn" name="categories" value="starships">StarShips</div>
+
+			<div><input type="radio" id="species-category" class="categories__radio-btn" name="categories" value="species">Species</div>
+
 		</section>
 
-		<div class="display-details">
-			<div class="display-details__content" id="information"> Not Found </div>
-			<div class="buttons">
-				<button class="btn btn__prevbtn" id="previous-btn">Previous</button>
-				<button class="btn btn__nextbtn" id="next-btn">Next</button>
+		<section class="display-section">
+			<div class="display-section__content">
+				<div class="label">
+					<div id="first-label"></div>
+					<div id="second-label"></div>
+					<div id="third-label"></div>
+					<div id="fourth-label"></div>
+					<div id="fifth-label"></div>
+					<div id="sixth-label"></div>
+				</div>
+
+				<div class="attributes">
+					<div id="first-attribute"></div>
+					<div id="second-attribute"></div>
+					<div id="third-attribute"></div>
+					<div id="fourth-attribute"></div>
+					<div id="fifth-attribute"></div>
+					<div id="sixth-attribute"></div>
+				</div>
 			</div>
-		</div>
+			<div class="display-section__buttons">
+				<button class="btn previous-button" id="previous-btn">&lt;&lt;Previous</button>
+				<button class="btn next-button" id="next-btn">Next&gt;&gt;</button>
+			</div>
+		</section>
 	</div>
 
 	<script src="scripts/app.js"></script>
 
 </body>
+
 </html>
