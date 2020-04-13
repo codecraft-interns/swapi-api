@@ -22,10 +22,9 @@
 
     const swapiAPI = (category, index = 1) =>
       `http://localhost:3000/${category}/${index}`;
-      var count = Object.keys(swapiAPI).length;
-      console.log(count);
+     
     function getRecord(category, index = 1) {
-      return fetch(swapiAPI(category, index)).then((data) => data.json());
+    return fetch(swapiAPI(category, index)).then((data) => data.json());
        
     }
 
