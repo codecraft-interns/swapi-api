@@ -21,7 +21,6 @@
     const nextBtn = document.getElementById('next-btn');
     const prevBtn = document.getElementById('previous-btn');
 
-
     const peopleCategory = document.getElementById('people-category');
     const planetCategory = document.getElementById('planet-category');
     const speciesCategory = document.getElementById('species-category');
@@ -153,18 +152,15 @@
 
     planetCategory.addEventListener('click', function (e) {
       initializeCategory(e.target.value);
-    }
-      , false)
+    }, false)
 
     speciesCategory.addEventListener('click', function (e) {
       initializeCategory(e.target.value);
-    }
-      , false)
+    }, false)
 
     starshipsCategory.addEventListener('click', function (e) {
       initializeCategory(e.target.value);
-    }
-      , false)
+    }, false)
 
     function init() {
       initializeCategory(currentCategory);
