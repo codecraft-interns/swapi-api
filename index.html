@@ -1,0 +1,52 @@
+
+<html>
+   
+<head>
+    <link rel="icon" type="image/png" href="icon/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Star War</title>
+</head>
+
+<body>
+    <h1 class="main-tittle">Star War</h1>
+    <div class="radio-button-section">
+        <p class="Categories">Categories</p>
+        <P class="Categories">
+            <input type="radio" checked name="choice" id="people-choice" value="person">Person
+        </P>
+        <P class="Categories">
+            <input type="radio" name="choice" id="planet-choice" value="planet">Planet
+        </P>
+        <P class="Categories">
+            <input type="radio" name="choice" id="space-choice" value="spaces">space
+        </P>
+        <P class="Categories">
+            <input type="radio" name="choice" id="species-choice" value="species">Species
+        </P>
+    </div>
+    
+    <div class="content-show">
+        <div class="content --left" >
+            <h3  id="first-label">Name:</h3><br>
+            <h3  id="second-label">Height:</h3><br>
+            <h3  id="third-label">Hair Color:</h3><br>
+            <h3  id="fourth-label">Skin Color:</h3><br>
+            <h3  id="fifth-label">Birth Year:</h3><br>
+            <h3  id="sixth-label">Gender:</h3><br>
+            <button  class="button --previous" id="back-button">&laquo Previous</button>
+            <button  class="button --next" id="forward-button" >Next &raquo</button>
+        </div>
+        <div class="content --right" >
+        <h3  id="first"></h3><br>
+        <h3  id="second"></h3><br>
+        <h3  id="third"></h3><br>
+        <h3  id="fourth"></h3><br>
+        <h3  id="fifth"></h3><br>
+        <h3  id="sixth"></h3><br>
+       
+        </div>
+    </div>
+</body>
+<script src="js/app.js"></script>
+
+</html>
