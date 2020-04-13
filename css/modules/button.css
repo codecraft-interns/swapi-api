@@ -1,0 +1,20 @@
+.btn
+{
+    display: flex;
+    flex-direction:row;
+    width: 75px;
+    height: 30px;
+    margin-left: 60px;
+    margin-right: 100px;
+}
+
+.btn--orange{
+    border-color:#FF4136;
+color:white;
+background-color: #FF4136;
+}
+.btn--green{
+    border-color:#3D9970;
+    color:white;
+    background-color: #3D9970;
+}
