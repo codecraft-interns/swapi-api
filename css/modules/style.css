@@ -1,0 +1,31 @@
+
+.categories{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.categories__radio-btn{
+    margin: 10px;
+}
+
+.display-section{
+    width: 500px;
+    height: 500px;
+    border: 2px solid rgb(119, 151, 155);
+    border-radius: 1%;
+    margin: 10px;
+}
+
+.display-section__content{
+    height:350px ;
+    padding: 50px 0 0 70px;
+    font-size: 20px;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.label{
+    font-weight: bold;
+}
