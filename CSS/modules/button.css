@@ -6,9 +6,10 @@
     margin: auto 50px;
     background-color: darkgreen;
     color: white;
-    border-style: none;
+    border: none;
 }
 
 .main-body__btn__blue {
     background-color: dodgerblue;
 }
+

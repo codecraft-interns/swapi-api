@@ -9,20 +9,19 @@
     position: relative;
 }
 
-.main-body__display-content {
+.display-box__list {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.display-box__list--content {
+    width: 150px;
     display: flex;
     flex-direction: column;
-    width: 400px;
-    margin: 20px auto;
+    justify-content: space-evenly;
 }
 
-.main-body__display-each-column {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.main-body__btn__container {
+.main-body__btn-container {
     position: absolute;
     bottom: 30px;
 }

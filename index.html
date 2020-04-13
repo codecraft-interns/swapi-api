@@ -20,88 +20,70 @@
 <body>
     <div class="container">
 
-
         <!-- HEADER -->
-
         <div class="head">
             <h1>Star Wars</h1>
         </div>
 
-
         <!-- MAIN BODY -->
-
         <div class="main-body">
 
             <!-- caterogy section -->
-            <div> 
-                <form class="main-body__check-box">
-
-                    <div class="main-body__check-box__content">
-                        <h3>Category</h3>
-                    </div>
-                    <div class="main-body__check-box__content">
-                        <input type="radio" id="people" name="star-wars" value="people">
-                        <label for="people">People</label>
-                    </div>
-                    <div class="main-body__check-box__content">
-                        <input type="radio" id="planets" name="star-wars" value="planets">
-                        <label for="planets">Planets</label>
-                    </div>
-                    <div class="main-body__check-box__content">
-                        <input type="radio" id="spaceships" name="star-wars" value="spaceships">
-                        <label for="spaceships">Spaceships</label>
-                    </div>
-                    <div class="main-body__check-box__content">
-                        <input type="radio" id="species" name="star-wars" value="species">
-                        <label for="species">Species</label>
-                    </div>
-
-                </form>
-            </div>
+             
+            <form class="main-body__check-box">
+                <div class="main-body__check-box__content">
+                    <h3>Category</h3>
+                </div>
+                <div class="main-body__check-box__content">
+                    <input type="radio" id="people-category" name="star-wars" value="people" checked>                        
+                    <label for="people-category">People</label>
+                </div>
+                <div class="main-body__check-box__content">
+                    <input type="radio" id="planet-category" name="star-wars" value="planets">
+                    <label for="planet-category">Planets</label>
+                </div>
+                <div class="main-body__check-box__content">
+                    <input type="radio" id="species-category" name="star-wars" value="species">
+                    <label for="species-category">Species</label>
+                </div>
+            </form>
 
             <!-- display section -->
 
             <div class="main-body__display-box">
 
-                <div class="main-body__display-content">
+                <div class="display-box__list">
 
-                    <span class="main-body__display-each-column">
-                        <p id="lhs-one"></p>:
-                        <p id="rhs-one"></p>
-                    </span>
-                    <span class="main-body__display-each-column">
-                        <p id="lhs-two"></p>:
-                        <p id="rhs-two"></p>
-                    </span>
-                    <span class="main-body__display-each-column">
-                        <p id="lhs-three"></p>:
-                        <p id="rhs-three"></p>
-                    </span>
-                    <span class="main-body__display-each-column">
-                        <p id="lhs-four"></p>:
-                        <p id="rhs-four"></p>
-                    </span>
-                    <span class="main-body__display-each-column">
-                        <p id="lhs-five"></p>:
-                        <p id="rhs-five"></p>
-                    </span>
-                    <span class="main-body__display-each-column">
-                        <p id="lhs-six"></p>:
-                        <p id="rhs-six"></p>
-                    </span>
+                    <div class="display-box__list--content">
+                        <p id="first-label"></p>
+                        <p id="second-label"></p>
+                        <p id="third-label"></p>
+                        <p id="fourth-label"></p>
+                        <p id="fifth-label"></p>
+                        <p id="sixth-label"></p>
+                        
+                    </div>
+                    <div class="display-box__list--content">
+                        <p id="first-attribute"></p>
+                        <p id="second-attribute"></p>
+                        <p id="third-attribute"></p>
+                        <p id="fourth-attribute"></p>
+                        <p id="fifth-attribute"></p>
+                        <p id="sixth-attribute"></p>
+                    </div>
 
                 </div>
 
-                <div class="main-body__btn__container">
-                    <button type="button" id="next" class="main-body__btn">&lt&lt Previous</button>
-                    <button type="button" id="prev" class="main-body__btn main-body__btn__blue">Next &gt&gt</button>
+                <div class="main-body__btn-container">
+                    <button type="button" id="prev-btn" class="main-body__btn">&lt&lt Previous</button>
+                    <button type="button" id="next-btn" class="main-body__btn main-body__btn__blue">Next &gt&gt</button>
                 </div>
                 
             </div>
         </div>
 
     </div>
-    <script src="scripts/app.js"></script>
+    <script src="scripts/implementation.js"></script>
 </body>
 
 </html>
