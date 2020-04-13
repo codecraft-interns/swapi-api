@@ -1,27 +1,25 @@
-.previous
+
+button
 {
-    background-color: #00BFFF;
     width: 100px;
     height: 40px;
-    color: white;
     border-radius: 10px;
     border: none;
     font-weight: normal;
     cursor: pointer;
     outline: none;
 }
+
+.previous
+{
+    background-color: #00BFFF;
+    color: white;
+    
+}
 .next
 {
     background-color:#32CD32;
-    width: 100px;
-    height: 40px;
     color: white;
-    border-radius: 10px;
-    border: none;
-    font-weight: normal;
-    margin-top: 35px;
-    outline: none;
-    cursor: pointer;
 }
 
 .previous:hover 

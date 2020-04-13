@@ -1,0 +1,23 @@
+{
+  "name": "codecraft",
+  "version": "1.0.0",
+  "description": "testing for api",
+  "main": "index.js",
+  "dependencies": {
+    "json-server": "^0.16.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "json:server": "json-server --watch assets/mock.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codecraft-interns/swapi-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codecraft-interns/swapi-api/issues"
+  },
+  "homepage": "https://github.com/codecraft-interns/swapi-api#readme"
+}
