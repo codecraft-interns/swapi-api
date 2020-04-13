@@ -1,62 +1,8 @@
-
-((window,document,undefined)=>{
-
-    console.log('hello');
-    let index=-1;
-    const previousBtn = document.getElementById("previous-btn");
-    const nextBtn = document.getElementById("next-btn");
-
-    const swapiPeopleAPI =`https://tejusravi.000webhostapp.com/swap-api/person/`;
-
-    const displayDetails=document.getElementById("information");
-    
-    function getPerson() {
-     
-        return fetch(swapiPeopleAPI).then(data => data.json());
-
-    }
-    
-    
-    async function nextPerson() {
-
-        const val = await getPerson(++index);
-
-        displayDetails.innerText=`Name:${val[index].name}
-                               hair_color:${val[index].hair_color}
-                               skin_color:${val[index].skin_color}
-                               gender:${val[index].gender}`;
-                            
-      }
-      
-      async function previousPerson() {
-
-        const val = await getPerson(--index);
-
-        displayDetails.innerText=`Name:${val[index].name}
-                               hair_color:${val[index].hair_color}
-                               skin_color:${val[index].skin_color}
-                               gender:${val[index].gender}`;
-                            
-      }
-
-      nextBtn.addEventListener('click', function(e) {
-        nextPerson();
-      }, false)
-      
-      
-      previousBtn.addEventListener('click', function(e) {
-        if(index){
-        previousPerson();}
-      }, false)
-
-      nextPerson();
-      
-
-})(window,document)((window, document, undefined) => {
+((window, document, undefined) => {
   window.onload = function () {
 
-    let index=0;
-    let currentCategory='people';
+    let index = 0;
+    let currentCategory = 'people';
 
     const firstLabel = document.getElementById('first-label');
     const secondLabel = document.getElementById('second-label');
@@ -71,15 +17,15 @@
     const fourthAttribute = document.getElementById('fourth-attribute');
     const fifthAttribute = document.getElementById('fifth-attribute');
     const sixthAttribute = document.getElementById('sixth-attribute');
-    
-    const nextBtn=document.getElementById('next-btn');
-    const prevBtn=document.getElementById('previous-btn'); 
-    
-    
+
+    const nextBtn = document.getElementById('next-btn');
+    const prevBtn = document.getElementById('previous-btn');
+
+
     const peopleCategory = document.getElementById('people-category');
     const planetCategory = document.getElementById('planet-category');
     const speciesCategory = document.getElementById('species-category');
-
+    const starshipsCategory = document.getElementById('starships-category');
 
     const swapiAPI = (choice, index) => `http://localhost:3000/${choice}/${index}`;
     function getRecord(category, index = 1) {
@@ -88,36 +34,36 @@
 
     const keyValueMap = {
       people: [
-        { label: 'Name', key :'name' },
-        { label: 'Height', key:'height' },
-        { label: 'Mass', key:'mass' },
-        { label: 'Hair color', key:'hair_color' },
-        { label: 'Birth year', key:'birth_year' },
-        { label: 'Gender', key:'gender' },
+        { label: 'Name', key: 'name' },
+        { label: 'Height', key: 'height' },
+        { label: 'Mass', key: 'mass' },
+        { label: 'Hair color', key: 'hair_color' },
+        { label: 'Birth year', key: 'birth_year' },
+        { label: 'Gender', key: 'gender' },
       ],
       planets: [
-        { label: 'Name', key:'name' },
-        { label: 'Rotation period', key:'rotation_period' },
-        { label: 'Orbital period', key:'orbital_period' },
-        { label: 'Diameter', key:'diameter' },
-        { label: 'Gravity', key:'gravity' },
-        { label: 'Population', key:'population' },
+        { label: 'Name', key: 'name' },
+        { label: 'Rotation period', key: 'rotation_period' },
+        { label: 'Orbital period', key: 'orbital_period' },
+        { label: 'Diameter', key: 'diameter' },
+        { label: 'Gravity', key: 'gravity' },
+        { label: 'Population', key: 'population' },
       ],
       species: [
-        { label: 'Name', key:'name' },
-        { label: 'Classification', key:'classification' },
-        { label: 'Designation', key:'designation' },
-        { label: 'Average height', key:'average_height' },
-        { label: 'Skin colors', key:'skin_colors' },
-        { label: 'Average lifespan', key:'average_lifespan' },
+        { label: 'Name', key: 'name' },
+        { label: 'Classification', key: 'classification' },
+        { label: 'Designation', key: 'designation' },
+        { label: 'Average height', key: 'average_height' },
+        { label: 'Skin colors', key: 'skin_colors' },
+        { label: 'Average lifespan', key: 'average_lifespan' },
       ],
-      starShips: [
-        { label: 'Name', key:'name' },
-        { label: 'Model', key:'model' },
-        { label: 'Manufacturer', key:'manufacturer' },
-        { label: 'Cost(in credits)', key:'name' },
-        { label: 'Crew', key:'crew' },
-        { label: 'Passengers', key:'passengers' },
+      starships: [
+        { label: 'Name', key: 'name' },
+        { label: 'Model', key: 'model' },
+        { label: 'Manufacturer', key: 'manufacturer' },
+        { label: 'Cost(in credits)', key: 'name' },
+        { label: 'Crew', key: 'crew' },
+        { label: 'Passengers', key: 'passengers' },
       ]
     }
 
@@ -155,9 +101,9 @@
 
       keyValueMapByCategory.forEach((entry, index) => {
         const currentAttribute = attributeRefs[index];
-        const {label, key} = entry;
-        currentAttribute.labelRef.innerText= label;
-        currentAttribute.valueRef.innerText= data[key];
+        const { label, key } = entry;
+        currentAttribute.labelRef.innerText = label;
+        currentAttribute.valueRef.innerText = data[key];
         //document.getElementById(currentAttribute[1]).innerText=
       });
     }
@@ -172,18 +118,18 @@
       updatePrevBtnStatus();
     }
 
-    function initializeCategory(catgeoryName) {
-      currentCategory = catgeoryName;
+    function initializeCategory(categoryName) {
+      currentCategory = categoryName;
       index = 0;
       updateNextRecord();
       updatePrevBtnStatus(index);
     }
 
     function updatePrevBtnStatus(index) {
-      if(index){
+      if (index) {
         prevBtn.disabled = false;
       }
-      else{
+      else {
         prevBtn.disabled = true;
       }
 
@@ -202,16 +148,21 @@
 
     //categories
     peopleCategory.addEventListener('click', function (e) {
-      initializeCategory('people')
+      initializeCategory(e.target.value)
     }, false)
 
     planetCategory.addEventListener('click', function (e) {
-      initializeCategory('planets');
+      initializeCategory(e.target.value);
     }
       , false)
 
     speciesCategory.addEventListener('click', function (e) {
-      initializeCategory('species');
+      initializeCategory(e.target.value);
+    }
+      , false)
+
+    starshipsCategory.addEventListener('click', function (e) {
+      initializeCategory(e.target.value);
     }
       , false)
 
