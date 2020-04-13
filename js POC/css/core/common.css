@@ -1,8 +1,4 @@
-.container{
-   display: var(--toDisplay-display );
-}
-
-#information, .buttons{
-    display: var(--toDisplay-display ) ;
-    justify-content: var(--toJustify-justify-content);
+body{
+    font-family: sans-serif;
+    box-sizing: border-box;
 }

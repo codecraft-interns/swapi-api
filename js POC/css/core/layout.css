@@ -1,0 +1,5 @@
+.container{
+    margin-right:250px;
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -25,7 +25,7 @@
     const planetCategory = document.getElementById('planet');
     const speciesCategory = document.getElementById('species');
 
-    const swapiPeopleAPI = (index = 1) => `https://swapi.co/api/${category}/${index}/?format=json`;
+    const swapiPeopleAPI = (category, index = 1) => `https://swapi.co/api/${category}/${index}/?format=json`;
 
     //const swapiPeopleAPI = (category, index = 1) => `swapiApi.json`;
 
