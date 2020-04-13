@@ -1,0 +1,17 @@
+.main__checkbox-title{
+    padding: 6px 0 16px 15px;
+    font-size :20px;
+}
+#category{
+    text-align: center;
+    margin-left: -16px;
+} 
+ form{
+   display: flex;
+   flex-direction: column;
+   word-spacing: 5px;
+   margin-left :8px;
+}
+input[type="radio"]{
+    margin-bottom: 22px;
+}

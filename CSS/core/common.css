@@ -1,4 +1,4 @@
 body{
-    margin: auto;
-    font-family: sans-serif;  
-}
+    box-sizing: border-box;
+    font-family: var(--var-fontfamily);
+ }

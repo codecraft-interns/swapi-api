@@ -1,0 +1,16 @@
+
+.main__name-list-labels{
+    padding-top: 15px;
+    margin-left: 10px;
+    text-align: center;
+    width:45%;
+}
+ .main__name-list-details{
+    padding-top :15px;
+    margin-left: 10px;
+    text-align: center;
+    width:45%;
+}
+.main__name-list p{
+    margin-bottom: 35px;
+}

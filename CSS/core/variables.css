@@ -1,4 +1,4 @@
 :root{
-    --var-display: flex;
-    --btn-border: 5px;
+    --var-fontfamily: sans-serif;
+    --var-maxwidth: 1220px;
 }

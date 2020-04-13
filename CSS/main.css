@@ -1,2 +1,15 @@
-@import url("variables.css");
-@import url("style.css");
+/* core */
+@import url("./css/core/common.css");
+@import url("./css/module/layout.css");
+@import url("./css/core/reset1.css");
+@import url("./css/core/variables.css");
+
+/* module */
+@import url("./css/module/button.css");
+@import url("./css/module/display-list.css");
+@import url("./css/module/header.css");
+@import url("./css/module/main-body.css");
+@import url("./css/module/radio-button.css");
+
+
+

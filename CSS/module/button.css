@@ -1,0 +1,13 @@
+button:hover{
+    background-color: #ffff33;
+    color: black;
+    transition: all 0.5s;
+    outline: none;
+    border: none;
+} 
+.nextBtn{
+    background: #0080ff; 
+} 
+.prevBtn{
+    background: #00b300;  
+} 
