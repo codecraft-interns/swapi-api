@@ -103,7 +103,6 @@
         const { label, key } = entry;
         currentAttribute.labelRef.innerText = label;
         currentAttribute.valueRef.innerText = data[key];
-        //document.getElementById(currentAttribute[1]).innerText=
       });
     }
     async function updateNextRecord() {
