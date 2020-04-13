@@ -1,13 +1,12 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel = "stylesheet" type = "text/css" href="/css/main.css">
+    <link rel = "stylesheet" type = "text/css" href="css/main.css">
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="icon" type="image/png" href="starwars.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
     <title>Star Wars </title>
 </head>
@@ -19,33 +18,37 @@
 
             <form class  = "container__flex-container__radio-btn">
                 <p>Categories</p>
-              <span><input type="radio" value = "people"   id="people" name = "selection"  checked><label>People</label></span>
-              <span><input type="radio" value = "spaceships" id="radio-btn" name = "selection" ><label>Spaceships</label></span>
+              <span><input type="radio" value = "people"   id="people-category" name = "selection"  checked><label>People</label></span>
+              <span><input type="radio" value = "starships" id="spaceship-category" name = "selection" ><label>Spaceships</label></span>
               
-              <span><input type="radio" value = "planets" id="radio-btn" name = "selection"><label>Planets</label></span>
+              <span><input type="radio" value = "planets" id="planet-category" name = "selection"><label>Planets</label></span>
                 
-                <span><input type="radio"value = "species"  id="radio-btn" name = "selection" ><label>Species</label></span>
+                <span><input type="radio"value = "species"  id="species-category" name = "selection" ><label>Species</label></span>
 
             </form> 
 
             <div class="container__flex-container__details">
                 <span class="container__flex-container__details__inner1">
-                    <span>Name:</span>
-                    <span>Height:</span>
-                    <span>Hair Color:</span>
-                    <span>Skin Color:</span>
-                    <span>Birth Year:</span>
-                    <span>Gender:</span>
-                    <span><button class = "previous" id = "previous" disabled>Previous</button></span>
+                    <span id = "first-label"></span>
+                    <span id = "second-label"></span>
+                    <span id = "third-label"> </span>
+                    <span id = "fourth-label"></span>
+                    <span id = "fifth-label"></span>
+                    <span id = "sixth-label"></span>
+                    <span></span>
+                    <span></span>
+                    <span><button class = "previous" id = "prev-btn" >Previous</button></span>
                 </span>
                 <div class = "container__flex-container__details__inner2" id = "information">
-                    <p id = "one"></p>
-                    <p id = "two"></p>
-                    <p id = "three"></p>
-                    <p id = "four"></p>
-                    <p id = "five"></p>
-                    <p id = "six"></p>
-                    <span><button class = "next" id ="next">Next</button></span>
+                    <p id = "first-attribute"></p>
+                    <p id = "second-attribute"></p>
+                    <p id = "third-attribute"></p>
+                    <p id = "fourth-attribute"></p>
+                    <p id = "fifth-attribute"></p>
+                    <p id = "sixth-attribute"></p>
+                    <p ></p>
+                    <p ></p>
+                    <span><button class = "next" id ="next-btn">Next</button></span>
                 </div>
             </div>
         </div>
