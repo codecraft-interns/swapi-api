@@ -107,7 +107,15 @@
     }
     async function updateNextRecord() {
       const data = await getRecord(currentCategory, ++index);
+      if(data['name']==undefined){
+        nextBtn.disabled==true;
+        --index;
+      }
+
+      else{
       renderUI(data, currentCategory);
+    }
+    updatePrevBtnStatus();
     }
 
     async function updatePreviousRecord() {
@@ -120,15 +128,15 @@
       currentCategory = categoryName;
       index = 0;
       updateNextRecord();
-      updatePrevBtnStatus(index);
+      updatePrevBtnStatus();
     }
 
-    function updatePrevBtnStatus(index) {
-      if (index) {
-        prevBtn.disabled = false;
+    function updatePrevBtnStatus() {
+      if (index<=1) {
+        prevBtn.disabled = true;
       }
       else {
-        prevBtn.disabled = true;
+        prevBtn.disabled = false;
       }
 
     }
