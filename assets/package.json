@@ -1,0 +1,22 @@
+{
+  "name": "projects1",
+  "version": "1.0.0",
+  "description": "fake api",
+  "main": "index.js",
+  "scripts": {
+    "json:server": "json-server --watch assets/mockData/abc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codecraft-interns/swapi-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codecraft-interns/swapi-api/issues"
+  },
+  "homepage": "https://github.com/codecraft-interns/swapi-api#readme",
+  "dependencies": {
+    "json-server": "^0.16.1"
+  }
+}

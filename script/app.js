@@ -76,7 +76,6 @@
   
       function renderUI(data, currentCategory) {
         const keyValueMapByCategory = keyValueMap[currentCategory];
-  
         keyValueMapByCategory.forEach((entry, index) => {
           const currentAttribute = attributeRefs[index];
           const {key, label} = entry;
@@ -94,9 +93,9 @@
         }
         else{
           renderUI(data, currentCategory);
-        }
-        updatePrevBtnStatus();
         
+        updatePrevBtnStatus();
+        }
       }
   
       async function updatePreviousRecord() {
