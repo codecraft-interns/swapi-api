@@ -111,7 +111,7 @@
       else{
         renderUI(data,currentCategory);
       }
-  }
+   }
    function updateprevbtnStatus() {
        if(index <= 1){
        prev_btn.disabled=true;
