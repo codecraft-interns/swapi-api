@@ -1,0 +1,17 @@
+.radio-button-section{
+    width: var(--radio-button-width);
+    height:var(--radio-button-height);
+    background-color:var(--radio-color);
+    padding-left: 50px;
+    padding-top: 50px;
+    float: left;
+
+
+}
+.Categories{
+    color: black;
+    padding-left: 20px;
+    font-style: normal;
+    font-size: 20px;
+   
+}
