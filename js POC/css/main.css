@@ -3,6 +3,7 @@
 @import url("core/reset.css");
 @import url("core/variable.css");
 
+@import url("modules/heading.css");
 @import url("modules/button.css");
-@import url("modules/information.css");
-@import url("modules/remaining.css");
+@import url("modules/displaylist.css");
+@import url("modules/content.css");

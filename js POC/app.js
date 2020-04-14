@@ -16,18 +16,21 @@
     const fifthAttribute = document.getElementById('value5');
     const sixthAttribute = document.getElementById('value6');
     
-    const personInfo = document.getElementById('information');
-    
     const nextBtn = document.getElementById('nextbutton');
     const prevBtn = document.getElementById('prevbutton');
 
     const peopleCategory = document.getElementById('people');
-    const planetCategory = document.getElementById('planet');
+    const planetCategory = document.getElementById('planets');
     const speciesCategory = document.getElementById('species');
+    const starShipsCategory = document.getElementById('starships');
 
-    const swapiPeopleAPI = (category, index = 1) => `https://swapi.co/api/${category}/${index}/?format=json`;
+    //const swapiAPI = (category, index = 1) => `https://swapi.co/api/${category}/${index}/?format=json`;
 
-    //const swapiPeopleAPI = (category, index = 1) => `swapiApi.json`;
+    const swapiAPI = (category, index = 1) => ` http://localhost:3000/${category}/${index}`;
+
+    function getRecord(category, index = 1) {
+    return fetch(swapiAPI(category, index)).then(data => data.json());
+    }
 
     const keyValueMap = {
       people: [
@@ -54,7 +57,7 @@
         { label: 'Skin colors', key:'skin_colors' },
         { label: 'Average lifespan', key:'average_lifespan' },
       ],
-      starShips: [
+      starships: [
         { label: 'Name', key:'name' },
         { label: 'Model', key:'model' },
         { label: 'Manufacturer', key:'manufacturer' },
@@ -92,32 +95,43 @@
       }
     ]
 
+    // function renderUI(data, currentCategory) {
+    //   const keyValueMapByCategory = keyValueMap[currentCategory];
+      
+    //   keyValueMapByCategory.forEach((entry, index) => {
+    //     const currentAttribute = attributeRefs[index];
+    //     const {key, label} = entry;
+    //     debugger;
+    //     const a=data[currentCategory][index];
+    //     currentAttribute.labelRef.innerText = label;
+    //     currentAttribute.valueRef.innerText = a[key];
+
+    //   });
+    // }
+
     function renderUI(data, currentCategory) {
       const keyValueMapByCategory = keyValueMap[currentCategory];
 
       keyValueMapByCategory.forEach((entry, index) => {
         const currentAttribute = attributeRefs[index];
-        const {key, label} = entry;
+        const {label, key} = entry;
         currentAttribute.labelRef.innerText = label;
         currentAttribute.valueRef.innerText = data[key];
+        
       });
-    }
-
-    function getRecord(category, index = 1) {
-      return fetch(swapiPeopleAPI(category, index)).then(data => data.json());
     }
 
     async function getNextRecord() {
       const data = await getRecord(currentCategory, ++index);
       renderUI(data, currentCategory);
-      //return ++index;
+
+      
     }
     
     async function getPrevRecord() {
       const data = await getRecord(currentCategory, --index);
-      renderUI(data, currentCategory)
-      updatePrevBtnStatus();
-      //return --index;
+      renderUI(data, currentCategory);
+      updatePrevBtnStatus(); 
     }
 
     function initializeCategory(catgeoryName) {
@@ -127,9 +141,20 @@
       updatePrevBtnStatus();
     }
 
-    function updatePrevBtnStatus() {
-      prevBtn.disabled = index === 1;
-    }
+    // function updatePrevBtnStatus() {
+    //   prevBtn.disabled = index === 1;
+    // }
+
+    // function updatePrevBtnStatus() {
+    //   if (index<=1) {
+    //     prevBtn.disabled = true;
+    //   }
+    //   if(index>1) {
+    //     prevBtn.disabled = false;
+    //   }
+
+    // }
+
     
     nextBtn.addEventListener('click', function(e) {
       getNextRecord();
@@ -143,15 +168,19 @@
       initializeCategory(e.target.value)
     }, false)
 
-    planetCategory.addEventListener('click', function () {
+    planetCategory.addEventListener('click', function (e) {
       initializeCategory(e.target.value);
     }
       , false)
 
-    speciesCategory.addEventListener('click', function () {
+    speciesCategory.addEventListener('click', function (e) {
       initializeCategory(e.target.value);
     }
       , false)
+
+    starShipsCategory.addEventListener('click', function (e) {
+        initializeCategory(e.target.value);
+    }, false)
 
     function init() {
       initializeCategory(currentCategory);
