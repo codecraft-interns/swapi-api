@@ -1,7 +1,4 @@
-.main-tittle{
-    font-size: 40px;
-    text-align: center;
-}
+
 .radio-button-section{
     width: var(--radio-button-width);
     height:var(--radio-button-height);
