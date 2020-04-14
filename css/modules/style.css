@@ -23,9 +23,10 @@
     font-size: 20px;
     line-height: 50px;
     display: flex;
-    justify-content: space-around;
 }
 
 .label{
     font-weight: bold;
+    margin-right: 50%;
 }
+
