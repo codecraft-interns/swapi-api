@@ -10,7 +10,7 @@
 }
 
 .display-section{
-    width: 500px;
+    width: 600px;
     height: 500px;
     border: 2px solid rgb(119, 151, 155);
     border-radius: 1%;
@@ -27,6 +27,6 @@
 
 .label{
     font-weight: bold;
-    margin-right: 50%;
+    width: 300px;
 }
 
