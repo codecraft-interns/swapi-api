@@ -1,5 +1,5 @@
 body {
-    background-color: var(--website-background-color);
+    background-color: #f0d2f1;
     font-family: var(--website-font-family);
 }
 
@@ -11,5 +11,5 @@ body {
 
 .content {
     display: flex;
-    margin: 20px;
+    margin: 40px 0;
 }

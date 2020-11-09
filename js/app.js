@@ -1,6 +1,5 @@
 ((window, document, undefined) => {
     window.onload = function() {
-
         let index = 0;
         let currentCategory = 'people';
         const firstLabel = document.getElementById('first-label');
@@ -20,18 +19,13 @@
         const nextBtn = document.getElementById('next-btn');
         const prevBtn = document.getElementById('prev-btn');
 
-
-        const peopleCategory = document.getElementById('people-category');
-        const planetCategory = document.getElementById('planet-category');
-        const spaceshipsCategory = document.getElementById('spaceships-category');
-        const speciesCategory = document.getElementById('species-category');
-
         const swapiAPI = (category, index = 1) => ` http://localhost:3000/${category}/${index}/?format=json`;
 
 
-        function getRecord(category, index = 1) {
+        getRecord = (category, index = 1) => {
             return fetch(swapiAPI(category, index)).then(data => data.json());
         }
+
         const keyValueMap = {
             people: [
                 { key: 'name', label: 'Name' },
@@ -94,10 +88,8 @@
             }
         ];
 
-        function renderUI(data, currentCategory) {
-
+        renderUI = (data, currentCategory) => {
             const keyValueMapByCategory = keyValueMap[currentCategory];
-
             keyValueMapByCategory.forEach((entry, index) => {
                 const currentAttribute = attributeRefs[index];
                 const { key, label } = entry;
@@ -105,63 +97,48 @@
                 currentAttribute.valueRef.innerText = data[key];
             });
         }
-        async function updateNextRecord() {
-            const data = await getRecord(currentCategory, ++index);
-            renderUI(data, currentCategory);
-            updatePrevBtnStatus();
+
+        updateRecord = async(value) => {
+            if (nextBtn === value) {
+                const data = await getRecord(currentCategory, ++index);
+                renderUI(data, currentCategory);
+                updatePrevBtnStatus();
+            } else {
+                const data = await getRecord(currentCategory, --index);
+                renderUI(data, currentCategory)
+                updatePrevBtnStatus();
+            }
         }
 
-        async function updatePreviousRecord() {
-            const data = await getRecord(currentCategory, --index);
-            renderUI(data, currentCategory)
-            updatePrevBtnStatus();
-        }
-
-        function initializeCategory(catgeoryName) {
+        initializeCategory = (catgeoryName) => {
             currentCategory = catgeoryName;
             index = 0;
-            updateNextRecord();
+            updateRecord(nextBtn);
             updatePrevBtnStatus();
         }
 
-        function updatePrevBtnStatus() {
-            if (index <= 1) {
-                prevBtn.disabled = true;
-            } else {
-                prevBtn.disabled = false;
-            }
+        updatePrevBtnStatus = () => {
+            index <= 1 ? prevBtn.disabled = true : prevBtn.disabled = false;
         }
 
         /* attach event listers*/
         //buttons
-        nextBtn.addEventListener('click', function(e) {
-            updateNextRecord();
+        nextBtn.addEventListener('click', (e) => {
+            updateRecord(nextBtn);
         }, false)
 
-
-        prevBtn.addEventListener('click', function(e) {
-            updatePreviousRecord();
+        prevBtn.addEventListener('click', (e) => {
+            updateRecord(prevBtn);
         }, false)
 
         //categories
-        peopleCategory.addEventListener('click', function(e) {
-            initializeCategory(e.target.value)
-        }, false)
+        document.querySelectorAll('.content__categories_selection').forEach(selectCategory => {
+            selectCategory.addEventListener('click', (e) => {
+                initializeCategory(e.target.value);
+            }, false)
+        })
 
-        planetCategory.addEventListener('click', function(e) {
-            initializeCategory(e.target.value);
-        }, false)
-
-        spaceshipsCategory.addEventListener('click', function(e) {
-            initializeCategory(e.target.value);
-        }, false)
-
-
-        speciesCategory.addEventListener('click', function(e) {
-            initializeCategory(e.target.value);
-        }, false)
-
-        function init() {
+        init = () => {
             initializeCategory(currentCategory);
         }
 
