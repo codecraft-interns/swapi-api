@@ -1,11 +1,12 @@
 /* Core  Files*/
-@import url("/css/core/reset.css");
-@import url("/css/core/variables.css");
-@import url("/css/core/common.css");
+@import url("core/reset.css");
+@import url("core/variables.css");
+@import url("core/common.css");
 
 
 /* Modules  Files*/
-@import url("/css/modules/button.css");
-@import url("/css/modules/radio-button.css");
-@import url("/css/modules/header.css");
-@import url("/css/modules/selection-container.css");
+@import url("modules/button.css");
+@import url("modules/radio-button.css");
+@import url("modules/header.css");
+@import url("modules/selection-container.css");
+

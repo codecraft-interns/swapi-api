@@ -2,108 +2,62 @@
   window.onload = function () {
     let index = 0;
     let currentCategory = "people";
-    const firstValue = document.getElementById("first-value");
-    const secondValue = document.getElementById("second-value");
-    const thirdValue = document.getElementById("third-value");
-    const fourthValue = document.getElementById("fourth-value");
+    const nextBtn = document.getElementById("nextbttn-status");
+    const prevBtn = document.getElementById("prevbttn-status");
+    var inputDetails = document.getElementById('mainview__box-content')
 
-    const firstAttribute = document.getElementById("first-attribute");
-    const secondAttribute = document.getElementById("second-attribute");
-    const thirdAttribute = document.getElementById("third-attribute");
-    const fourthAttribute = document.getElementById("fourth-attribute");
-
-    const nextBtn = document.getElementById("next-btn");
-    const prevBtn = document.getElementById("prev-btn");
-
-    const peopleCategory = document.getElementById("people-category");
-    const planetCategory = document.getElementById("planet-category");
-    const spaceCategory = document.getElementById("space-category");
-    const speciesCategory = document.getElementById("species-category");
 
     const swapiAPI = (category, index = 1) =>
       `http://localhost:3000/${category}/${index}`;
-     
+
     function getRecord(category, index = 1) {
-    return fetch(swapiAPI(category, index)).then((data) => data.json());
-       
+      return fetch(swapiAPI(category, index)).then((data) =>  data.json())
     }
-
-    const keyValueMap = {
-      people: [
-        { key: "name", value: "Name" },
-        { key: "height", value: "Height" },
-        { key: "gender", value: "Gender" },
-        { key: "skin_color", value: "Skin color" },
-      ],
-      planets: [
-        { key: "name", value: "Name" },
-        { key: "diameter", value: "Diameter" },
-        { key: "climate", value: "Climate" },
-        { key: "gravity", value: "Gravity" },
-      ],
-      space: [
-        { key: "name", value: "Name" },
-        { key: "model", value: "Model" },
-        { key: "crew", value: "Crew" },
-        { key: "passenger", value: "Passenger" },
-      ],
-      species: [
-        { key: "name", value: "Name" },
-        { key: "average_height", value: "Height" },
-        { key: "classification", value: "Classification" },
-        { key: "designation", value: "Designation" },
-      ],
-    };
-
-    const attributeRefs = [
-      {
-        valueRef: firstValue,
-        attributeRef: firstAttribute,
-      },
-      {
-        valueRef: secondValue,
-        attributeRef: secondAttribute,
-      },
-      {
-        valueRef: thirdValue,
-        attributeRef: thirdAttribute,
-      },
-      {
-        valueRef: fourthValue,
-        attributeRef: fourthAttribute,
-      },
-    ];
-
     
 
+    const keyValueMap = {
+      people:['name','height','skin_color','gender'],
+      planets:['name','diameter',"climate","gravity"],
+      starships:[ "name","model","crew","passengers"],
+      species:[ "name","average_height", "classification","designation"]
+    };
+
+    function displayClean() {
+      inputDetails.innerHTML = "";
+    }
+
     function renderUI(data, currentCategory) {
-      const keyValueMapByCategory = keyValueMap[currentCategory];
-      keyValueMapByCategory.forEach((entry, index) => {
-        const currentAttribute = attributeRefs[index];
-        const { key, value } = entry;
-        currentAttribute.attributeRef.innerHTML =value;
-        currentAttribute.valueRef.innerHTML= data[key];
+        displayClean();
+        const keyValueMapByCategory = keyValueMap[currentCategory];
+        keyValueMapByCategory.forEach((entry, index) => {
+        var detailtag = document.createElement('div')
+        var propertytag = document.createElement('div');
+        propertytag.className = "style"
+        propertytag.innerHTML = `${entry}`.replaceAll('_',' ').toUpperCase();
+        detailtag.innerHTML = data[entry];
+        inputDetails.appendChild(propertytag);
+        inputDetails.appendChild(detailtag)
       });
+   
     }
 
     async function updateNextRecord() {
       const data = await getRecord(currentCategory, ++index);
-      if(data["name"]==undefined){
-        nextBtn.disabled=true;
+      if (data["name"] == undefined) {
+        nextBtn.disabled = true;
         --index;
       }
-      else
-      {
-      renderUI(data,currentCategory);
+      else {
+        prevBtn.disabled = false;
+        renderUI(data, currentCategory);
       }
-      
     }
-
     async function updatePreviousRecord() {
       if (index <= 1) {
         let index = 1;
+        prevBtn.disabled = true;
       } else {
-        nextBtn.disabled=false;
+        nextBtn.disabled = false;
         const data = await getRecord(currentCategory, --index);
         renderUI(data, currentCategory);
       }
@@ -114,55 +68,22 @@
       index = 0;
       updateNextRecord();
     }
+
     //Button's  Event Listeners
-    nextBtn.addEventListener(
-      "click",
-      function (e) {
-        updateNextRecord();
-      },
-      false
-    );
+    function targetButton(e) {
+      const callUpdate = e.target.innerHTML == '&lt;&lt;PREVIOUS' ? updatePreviousRecord() : updateNextRecord();
+    }
+    const buttonEvent = document.querySelector('#button');
+    buttonEvent.addEventListener('click', targetButton)
 
-    prevBtn.addEventListener(
-      "click",
-      function (e) {
-        updatePreviousRecord();
-      },
-      false
-    );
+    //CATEGORY Selections Event listener
+    function targetSelect(e) {
+      initializeCategory(e.target.value)
+    }
 
-    //CATEGORY
-    peopleCategory.addEventListener(
-      "click",
-      function (e) {
-        initializeCategory(e.target.value);
-      },
-      false
-    );
+    const selectionEvent = document.querySelector('#selection-id');
+    selectionEvent.addEventListener('click', targetSelect)
 
-    planetCategory.addEventListener(
-      "click",
-      function (e) {
-        initializeCategory(e.target.value);
-      },
-      false
-    );
-
-    spaceCategory.addEventListener(
-      "click",
-      function (e) {
-        initializeCategory(e.target.value);
-      },
-      false
-    );
-
-    speciesCategory.addEventListener(
-      "click",
-      function (e) {
-        initializeCategory(e.target.value);
-      },
-      false
-    );
 
     function init() {
       initializeCategory(currentCategory);

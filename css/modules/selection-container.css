@@ -1,6 +1,21 @@
+.main-container{  
+margin: 0px 100px 0px 100px ;
+width:100%;
+}
+
 .selection-container-view{
     display: flex;
     flex-direction: row;
+}
+.sideview__cat-orientation{
+    display: flex;
+    flex-direction: column;
+}
+.sideview__cat-orientation > div {
+    font-size: 15px;
+    padding-top: 40px;
+    margin-left: 10px;
+
 }
  
 .sideview{
@@ -8,24 +23,25 @@
     height: 50%;
     width:300px;
     justify-content: center;
-
     margin-left: 200px;
+
 }
 
 .sideview__cat{
-  
     flex-direction: column;
     font-weight: bold;
     font-size: 45px;
 
+  
+
 }
-.sideview__cat > div {
+/* .sideview__cat > div {
     font-size: 15px;
     padding-top: 40px;
     margin-left: 10px;
    
 
-}
+} */
 
 .mainview {
     display: flex;
@@ -37,18 +53,85 @@
     border-radius: 2%;
     margin-left: 130px;
    padding-top: 10px;
+
+  
+}
+.mainview__bttn{
+    display: flex;
+    /* position: fixed; */
+    justify-content: space-around;
+    padding-top: 5%;
 }
 
-.mainview__box{
+#mainview__box-content{
     display: flex;
     flex-wrap: wrap;
    min-width: 594px;
 }
 
-.mainview__box > div{
+#mainview__box-content> div{
     text-align: center;
     padding-top: 90px;;
     font-size: 15px;
-    width: 270px;
+    width: 295px;
     height: 20px;
+}
+
+.style{
+    font-weight:bold;
+}
+
+
+
+@media (max-width:1220px){
+    .main-container{
+        margin-left:10% ;
+       margin-right:10% ;  
+    }
+    .selection-container-view{
+        flex-direction: column;
+        align-items: center;
+    }
+    .sideview{
+        flex-direction: row;
+        width:100%;
+        justify-content: space-evenly;
+        margin-left:10% ;
+        margin-right:10% ; 
+    }
+    .sideview__cat{
+        width: 100%;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    
+    }
+    .sideview__cat-orientation{
+        flex-direction: row; 
+        justify-content: space-around;
+      
+    }
+
+    .sideview__cat-orientation > div {
+        padding: 20px 0px 20px 0px;   
+    }
+
+    .mainview {
+        width: 500px;
+    }
+
+    #mainview__box-content> div{
+        font-size: 13px;
+        width: 250px;
+    }
+}
+
+@media (max-width:550px){
+    .mainview {
+        width: 400px;
+        margin-left: 75px;  
+    }
+    #mainview__box-content> div{
+        width: 200px;  
+    }
 }

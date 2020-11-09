@@ -4,16 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Wars</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
  
 
 </head>
 <body>
 
-
+<div class="main-container">
 <!--header section-->
   <header class="header">
-      <div class="header__name"> Star Wars</div>
+      <!-- <div class="header__name"> Star Wars</div> -->
+      Star Wars
   </header> 
 
 
@@ -22,38 +23,38 @@
     <!--sideview  section-->
 
   <selection class="sideview"> 
-      <div class="sideview__cat"> 
+      <div class="sideview__cat" id="selection-id"> 
 
           Categories
-       
-          <div class="sideview__cat--people">
+       <div class="sideview__cat-orientation">
+          <div class="sideview__cat--people" id="peopleCategory">
             
                     <input type="radio"  class="people-bttn" id="people-category"   name="Starwars"  value="people" checked >
                     People
       
         </div>  
 
-        <div class="sideview__cat--planet">
+        <div class="sideview__cat--planet" id="planetCategory">
                
                     <input type="radio" class="planet-bttn"  id="planet-category"   name="Starwars"  value="planets" >
                     Planet    
         </div>  
         
         
-        <div class="sideview__cat--space">
+        <div class="sideview__cat--space" id="spaceCategory">
                 <input type="radio"  class="space-bttn"  id="space-category"       name="Starwars"   value="starships" >
                 SpaceShips
            
         </div>  
         
         
-        <div class="sideview__cat--species">
+        <div class="sideview__cat--species" id="speciesCategory">
         
                 <input type="radio"  class="species-bttn"  id="species-category"    name="Starwars"  value="species" >
                 Species
             
         </div>
-        
+      </div>
 
 
 
@@ -63,38 +64,29 @@
 
 
   <container class="mainview">
-
-           <div class="mainview__box">
-
-     <div  id="first-attribute">-</div>
-     <div id="first-value"> - </div>
-    
-
-    <div  id="second-attribute">-</div>
-    <div  id="second-value"> - </div>
-    
-
-    <div  id="third-attribute">-</div>
-    <div  id="third-value">-</div>
-    
-    
-    <div   id="fourth-attribute">-</div>
-    <div  id="fourth-value">-</div>
-
-    <div class="mainview__bttn-previous">
-        <button  class="previous-bttn"  id="prev-btn">&lt&ltPREVIOUS</button>
+     <div id="mainview__box">
+              <div id="mainview__box-content">
+              </div>
+     <div class="mainview__bttn" id='button'>
+      <div  id="prev-btn">
+        <button  class="previous-bttn" id="prevbttn-status">&lt&ltPREVIOUS</button>
       </div>
-      
-
-    <div class="mainview__bttn-next">
-        <button   class="next-bttn"   id="next-btn">NEXT&gt&gt</button>
+      <div id="next-btn">
+        <button  class="next-bttn" id="nextbttn-status">NEXT&gt&gt</button>
       </div>
+    </div>
 
+    
+
+  
     </div>
   </container>
+  
+ 
 
 </div>
 <!--script sections-->
 <script src="/js/app.js"> </script>
+</div>
 </body>
 </html>

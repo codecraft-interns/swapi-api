@@ -1,3 +1,6 @@
+.mainview__bttn{
+
+}
 .previous-bttn{
     width: 123px;
 	height: 38px;
@@ -6,11 +9,8 @@
 	border-radius: 5px;
 	color: #ffffff;
 	margin: 50px 0px 0px 0px;
-    width: 123px;
-	height: 38px;
-	
-
-}
+  
+	}
 
 .next-bttn{
 	width: 123px;
@@ -19,8 +19,6 @@
 	border-radius: 5px;
 	color: #ffffff;
 	margin: 50px 0px 0px 0px;
-    width: 123px;
-	height: 38px;
 	background-color:#2dabf9;
 }
 
