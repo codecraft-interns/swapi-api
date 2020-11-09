@@ -4,7 +4,7 @@
     "description": "Fake REST API for testing",
     "main": "index.js",
     "scripts": {
-        "json:server": "json-server --watch interns.json"
+        "json:server": "json-server --watch people.json"
     },
     "author": "",
     "license": "ISC",
